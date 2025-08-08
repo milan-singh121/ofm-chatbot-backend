@@ -1,0 +1,866 @@
+articleGroupDescription,brandDescription,season,quantity,retailPrice,Inhouse_Brand,year,category,purchaseValue
+5-pocket,Donkervoort,Winter,6.0,233.74,Internal,2025,Forecasted Sales,
+5-pocket,J.C. RAGS,Winter,250.0,8180.16,Internal,2025,Forecasted Sales,
+5-pocket,Others,Summer,3754.0,330603.42,External,2025,Forecasted Sales,
+5-pocket,Others,Winter,3959.0,348617.88,External,2025,Forecasted Sales,
+Boots,Campbell,Winter,406.0,26287.63,Internal,2025,Forecasted Sales,
+Boots,Dutch Dandies,Winter,21.0,2691.71,Internal,2025,Forecasted Sales,
+Boots,Others,Summer,22.0,2818.8,External,2025,Forecasted Sales,
+Boots,Others,Winter,1020.0,128071.7,External,2025,Forecasted Sales,
+Boots,Recall,Winter,148.0,11259.3,Internal,2025,Forecasted Sales,
+Boxershort,Others,Summer,1754.0,58619.39,External,2025,Forecasted Sales,
+Boxershort,Others,Winter,1407.0,47021.91,External,2025,Forecasted Sales,
+Cardigan,Campbell,Summer,1760.0,110341.97,Internal,2025,Forecasted Sales,
+Cardigan,Campbell,Winter,2851.0,178708.57,Internal,2025,Forecasted Sales,
+Cardigan,Donkervoort,Summer,556.0,30182.86,Internal,2025,Forecasted Sales,
+Cardigan,Donkervoort,Winter,1151.0,62535.98,Internal,2025,Forecasted Sales,
+Cardigan,Dutch Dandies,Summer,152.0,9991.68,Internal,2025,Forecasted Sales,
+Cardigan,Dutch Dandies,Winter,551.0,36299.19,Internal,2025,Forecasted Sales,
+Cardigan,J.C. RAGS,Winter,1300.0,110961.98,Internal,2025,Forecasted Sales,
+Cardigan,Others,Summer,3897.0,455544.89,External,2025,Forecasted Sales,
+Cardigan,Others,Winter,7391.0,864122.83,External,2025,Forecasted Sales,
+Cardigan,The BLUEPRINT Premium,Winter,3527.0,113149.85,Internal,2025,Forecasted Sales,
+Casual Shoe,Campbell,Summer,223.0,14456.83,Internal,2025,Forecasted Sales,
+Casual Shoe,Campbell,Winter,448.0,28964.47,Internal,2025,Forecasted Sales,
+Casual Shoe,Others,Summer,1505.0,206213.41,External,2025,Forecasted Sales,
+Casual Shoe,Others,Winter,1922.0,263225.73,External,2025,Forecasted Sales,
+Casual Shoe,Recall,Winter,3.0,0.0,Internal,2025,Forecasted Sales,
+Casual belt,J.C. RAGS,Summer,3.0,35.85,Internal,2025,Forecasted Sales,
+Casual belt,Others,Summer,1521.0,80912.87,External,2025,Forecasted Sales,
+Casual belt,Others,Winter,3322.0,176758.17,External,2025,Forecasted Sales,
+Casual shirt LS,Campbell,Summer,5629.0,243248.96,Internal,2025,Forecasted Sales,
+Casual shirt LS,Campbell,Winter,9108.0,393600.77,Internal,2025,Forecasted Sales,
+Casual shirt LS,Donkervoort,Summer,78.0,2971.34,Internal,2025,Forecasted Sales,
+Casual shirt LS,Donkervoort,Winter,173.0,6636.53,Internal,2025,Forecasted Sales,
+Casual shirt LS,J.C. RAGS,Summer,2314.0,115543.77,Internal,2025,Forecasted Sales,
+Casual shirt LS,J.C. RAGS,Winter,1011.0,50501.03,Internal,2025,Forecasted Sales,
+Casual shirt LS,Others,Summer,11364.0,860683.92,External,2025,Forecasted Sales,
+Casual shirt LS,Others,Winter,14652.0,1109719.81,External,2025,Forecasted Sales,
+Casual shirt LS,The BLUEPRINT Premium,Winter,48.0,1400.52,Internal,2025,Forecasted Sales,
+Casual shirt SS,Campbell,Summer,8451.0,300822.01,Internal,2025,Forecasted Sales,
+Casual shirt SS,J.C. RAGS,Summer,1187.0,50899.95,Internal,2025,Forecasted Sales,
+Casual shirt SS,Others,Summer,7406.0,482323.83,External,2025,Forecasted Sales,
+Casual shirt SS,Others,Winter,678.0,44187.13,External,2025,Forecasted Sales,
+Casual shirt SS,The BLUEPRINT Premium,Summer,178.0,4794.68,Internal,2025,Forecasted Sales,
+Chino,Campbell,Summer,414.0,25419.38,Internal,2025,Forecasted Sales,
+Chino,Campbell,Winter,696.0,42804.29,Internal,2025,Forecasted Sales,
+Chino,Donkervoort,Summer,63.0,2550.07,Internal,2025,Forecasted Sales,
+Chino,Donkervoort,Winter,111.0,4438.63,Internal,2025,Forecasted Sales,
+Chino,Dutch Dandies,Summer,574.0,50304.15,Internal,2025,Forecasted Sales,
+Chino,Dutch Dandies,Winter,524.0,45916.01,Internal,2025,Forecasted Sales,
+Chino,J.C. RAGS,Summer,1930.0,70021.34,Internal,2025,Forecasted Sales,
+Chino,J.C. RAGS,Winter,942.0,34194.16,Internal,2025,Forecasted Sales,
+Chino,Others,Summer,16226.0,1767798.24,External,2025,Forecasted Sales,
+Chino,Others,Winter,15149.0,1650367.77,External,2025,Forecasted Sales,
+Coat,Campbell,Winter,639.0,97341.59,Internal,2025,Forecasted Sales,
+Coat,Dutch Dandies,Summer,106.0,21207.36,Internal,2025,Forecasted Sales,
+Coat,Dutch Dandies,Winter,530.0,106184.05,Internal,2025,Forecasted Sales,
+Coat,J.C. RAGS,Winter,91.0,7165.85,Internal,2025,Forecasted Sales,
+Coat,Nobel,Winter,906.0,148543.29,Internal,2025,Forecasted Sales,
+Coat,Others,Summer,84.0,16184.04,External,2025,Forecasted Sales,
+Coat,Others,Winter,729.0,141376.31,External,2025,Forecasted Sales,
+Coat,Recall,Winter,1654.0,247905.34,Internal,2025,Forecasted Sales,
+Crew-neck sweater,Campbell,Summer,504.0,24172.9,Internal,2025,Forecasted Sales,
+Crew-neck sweater,Campbell,Winter,1922.0,92269.79,Internal,2025,Forecasted Sales,
+Crew-neck sweater,Donkervoort,Summer,75.0,3511.77,Internal,2025,Forecasted Sales,
+Crew-neck sweater,Donkervoort,Winter,412.0,19327.26,Internal,2025,Forecasted Sales,
+Crew-neck sweater,Dutch Dandies,Summer,570.0,37923.76,Internal,2025,Forecasted Sales,
+Crew-neck sweater,Dutch Dandies,Winter,1116.0,74275.35,Internal,2025,Forecasted Sales,
+Crew-neck sweater,J.C. RAGS,Summer,802.0,37524.67,Internal,2025,Forecasted Sales,
+Crew-neck sweater,J.C. RAGS,Winter,1756.0,82225.36,Internal,2025,Forecasted Sales,
+Crew-neck sweater,Others,Summer,3655.0,319647.34,External,2025,Forecasted Sales,
+Crew-neck sweater,Others,Winter,8395.0,734294.36,External,2025,Forecasted Sales,
+Crew-neck sweater,The BLUEPRINT Premium,Winter,8721.0,304112.62,Internal,2025,Forecasted Sales,
+Dress Shirt LS,Donkervoort,Summer,6.0,151.0,Internal,2025,Forecasted Sales,
+Dress Shirt LS,Donkervoort,Winter,1.0,25.71,Internal,2025,Forecasted Sales,
+Dress Shirt LS,Dutch Dandies,Summer,3417.0,292445.7,Internal,2025,Forecasted Sales,
+Dress Shirt LS,Dutch Dandies,Winter,2162.0,185055.58,Internal,2025,Forecasted Sales,
+Dress Shirt LS,Others,Summer,18484.0,1704033.54,External,2025,Forecasted Sales,
+Dress Shirt LS,Others,Winter,14652.0,1350791.44,External,2025,Forecasted Sales,
+Dress Shirt LS,Recall,Summer,2693.0,118263.74,Internal,2025,Forecasted Sales,
+Dress Shirt LS,Recall,Winter,2739.0,120243.91,Internal,2025,Forecasted Sales,
+Dress Shoe,Others,Summer,1190.0,175522.68,External,2025,Forecasted Sales,
+Dress Shoe,Others,Winter,966.0,142351.36,External,2025,Forecasted Sales,
+Dress Shoe,Recall,Summer,1416.0,95786.19,Internal,2025,Forecasted Sales,
+Dress Shoe,Recall,Winter,920.0,62247.93,Internal,2025,Forecasted Sales,
+Dress belt,Others,Summer,5440.0,286239.42,External,2025,Forecasted Sales,
+Dress belt,Others,Winter,4680.0,246226.51,External,2025,Forecasted Sales,
+Hoodie,Donkervoort,Summer,19.0,815.53,Internal,2025,Forecasted Sales,
+Hoodie,Donkervoort,Winter,55.0,2312.33,Internal,2025,Forecasted Sales,
+Hoodie,Dutch Dandies,Winter,28.0,1214.12,Internal,2025,Forecasted Sales,
+Hoodie,J.C. RAGS,Summer,53.0,2417.89,Internal,2025,Forecasted Sales,
+Hoodie,J.C. RAGS,Winter,214.0,9861.92,Internal,2025,Forecasted Sales,
+Hoodie,Others,Summer,271.0,24118.95,External,2025,Forecasted Sales,
+Hoodie,Others,Winter,492.0,43673.91,External,2025,Forecasted Sales,
+Hoodie,The BLUEPRINT Premium,Summer,17.0,489.27,Internal,2025,Forecasted Sales,
+Jack outdoor,Campbell,Summer,1601.0,131635.81,Internal,2025,Forecasted Sales,
+Jack outdoor,Campbell,Winter,137.0,11296.14,Internal,2025,Forecasted Sales,
+Jack outdoor,Donkervoort,Summer,182.0,8897.05,Internal,2025,Forecasted Sales,
+Jack outdoor,Donkervoort,Winter,44.0,2177.69,Internal,2025,Forecasted Sales,
+Jack outdoor,Dutch Dandies,Summer,0.0,0.0,Internal,2025,Forecasted Sales,
+Jack outdoor,Dutch Dandies,Winter,1.0,0.0,Internal,2025,Forecasted Sales,
+Jack outdoor,J.C. RAGS,Summer,417.0,22755.04,Internal,2025,Forecasted Sales,
+Jack outdoor,J.C. RAGS,Winter,113.0,6182.01,Internal,2025,Forecasted Sales,
+Jack outdoor,Others,Summer,4866.0,885110.33,External,2025,Forecasted Sales,
+Jack outdoor,Others,Winter,1096.0,199431.04,External,2025,Forecasted Sales,
+Jacket,Campbell,Summer,2030.0,239230.62,Internal,2025,Forecasted Sales,
+Jacket,Campbell,Winter,1347.0,158680.96,Internal,2025,Forecasted Sales,
+Jacket,Donkervoort,Summer,8.0,514.61,Internal,2025,Forecasted Sales,
+Jacket,Donkervoort,Winter,11.0,643.63,Internal,2025,Forecasted Sales,
+Jacket,Dutch Dandies,Summer,2427.0,410587.78,Internal,2025,Forecasted Sales,
+Jacket,Dutch Dandies,Winter,1970.0,333158.87,Internal,2025,Forecasted Sales,
+Jacket,Others,Summer,975.0,195120.41,External,2025,Forecasted Sales,
+Jacket,Others,Winter,782.0,156647.49,External,2025,Forecasted Sales,
+Jacket,The BLUEPRINT Premium,Summer,352.0,36710.7,Internal,2025,Forecasted Sales,
+Jacket,The BLUEPRINT Premium,Winter,259.0,26939.66,Internal,2025,Forecasted Sales,
+Jeans,J.C. RAGS,Summer,3062.0,239028.14,Internal,2025,Forecasted Sales,
+Jeans,J.C. RAGS,Winter,993.0,77510.19,Internal,2025,Forecasted Sales,
+Jeans,Others,Summer,21567.0,2490996.09,External,2025,Forecasted Sales,
+Jeans,Others,Winter,16587.0,1915840.18,External,2025,Forecasted Sales,
+Mix & match jacket,Campbell,Winter,343.0,36505.82,Internal,2025,Forecasted Sales,
+Mix & match jacket,Dutch Dandies,Summer,799.0,147941.36,Internal,2025,Forecasted Sales,
+Mix & match jacket,Dutch Dandies,Winter,884.0,163834.73,Internal,2025,Forecasted Sales,
+Mix & match jacket,Others,Summer,5295.0,1260761.4,External,2025,Forecasted Sales,
+Mix & match jacket,Others,Winter,4549.0,1083309.97,External,2025,Forecasted Sales,
+Mix & match jacket,Recall,Summer,318.0,22088.96,Internal,2025,Forecasted Sales,
+Mix & match jacket,Recall,Winter,326.0,22633.49,Internal,2025,Forecasted Sales,
+Mix & match jacket,The BLUEPRINT Premium,Summer,446.0,60978.41,Internal,2025,Forecasted Sales,
+Mix & match jacket,The BLUEPRINT Premium,Winter,427.0,58482.85,Internal,2025,Forecasted Sales,
+Mix & match trousers,Campbell,Winter,283.0,15837.19,Internal,2025,Forecasted Sales,
+Mix & match trousers,Dutch Dandies,Summer,1153.0,87516.98,Internal,2025,Forecasted Sales,
+Mix & match trousers,Dutch Dandies,Winter,1105.0,83837.71,Internal,2025,Forecasted Sales,
+Mix & match trousers,Others,Summer,4695.0,544143.8,External,2025,Forecasted Sales,
+Mix & match trousers,Others,Winter,4043.0,468586.28,External,2025,Forecasted Sales,
+Mix & match trousers,Recall,Summer,366.0,13200.51,Internal,2025,Forecasted Sales,
+Mix & match trousers,Recall,Winter,520.0,18747.38,Internal,2025,Forecasted Sales,
+Mix & match trousers,The BLUEPRINT Premium,Summer,761.0,55432.46,Internal,2025,Forecasted Sales,
+Mix & match trousers,The BLUEPRINT Premium,Winter,247.0,18010.72,Internal,2025,Forecasted Sales,
+Others,Campbell,Summer,660.0,27480.39,Internal,2025,Forecasted Sales,
+Others,Campbell,Winter,496.0,20634.21,Internal,2025,Forecasted Sales,
+Others,Donkervoort,Summer,408.0,10626.35,Internal,2025,Forecasted Sales,
+Others,Donkervoort,Winter,130.0,3371.37,Internal,2025,Forecasted Sales,
+Others,Dutch Dandies,Summer,652.0,77277.82,Internal,2025,Forecasted Sales,
+Others,Dutch Dandies,Winter,521.0,61683.9,Internal,2025,Forecasted Sales,
+Others,J.C. RAGS,Summer,905.0,30117.41,Internal,2025,Forecasted Sales,
+Others,J.C. RAGS,Winter,934.0,31080.06,Internal,2025,Forecasted Sales,
+Others,Others,Summer,15607.0,1451909.61,External,2025,Forecasted Sales,
+Others,Others,Winter,9342.0,869030.87,External,2025,Forecasted Sales,
+Others,Recall,Summer,615.0,81719.91,Internal,2025,Forecasted Sales,
+Others,Recall,Winter,220.0,29295.82,Internal,2025,Forecasted Sales,
+Others,The BLUEPRINT Premium,Summer,549.0,17512.02,Internal,2025,Forecasted Sales,
+Others,The BLUEPRINT Premium,Winter,227.0,7259.61,Internal,2025,Forecasted Sales,
+Overshirt,Campbell,Summer,313.0,18142.31,Internal,2025,Forecasted Sales,
+Overshirt,Campbell,Winter,649.0,37664.11,Internal,2025,Forecasted Sales,
+Overshirt,Donkervoort,Winter,111.0,4219.85,Internal,2025,Forecasted Sales,
+Overshirt,Dutch Dandies,Summer,348.0,34205.09,Internal,2025,Forecasted Sales,
+Overshirt,Dutch Dandies,Winter,110.0,10815.99,Internal,2025,Forecasted Sales,
+Overshirt,J.C. RAGS,Summer,1095.0,64144.02,Internal,2025,Forecasted Sales,
+Overshirt,J.C. RAGS,Winter,1605.0,93974.19,Internal,2025,Forecasted Sales,
+Overshirt,Others,Summer,3145.0,375991.75,External,2025,Forecasted Sales,
+Overshirt,Others,Winter,4487.0,536367.69,External,2025,Forecasted Sales,
+Padded jacket,Campbell,Summer,118.0,8738.47,Internal,2025,Forecasted Sales,
+Padded jacket,Campbell,Winter,772.0,57156.38,Internal,2025,Forecasted Sales,
+Padded jacket,Donkervoort,Summer,68.0,5911.72,Internal,2025,Forecasted Sales,
+Padded jacket,Donkervoort,Winter,596.0,51758.76,Internal,2025,Forecasted Sales,
+Padded jacket,J.C. RAGS,Summer,122.0,9113.74,Internal,2025,Forecasted Sales,
+Padded jacket,J.C. RAGS,Winter,397.0,29499.0,Internal,2025,Forecasted Sales,
+Padded jacket,Others,Summer,292.0,64168.78,External,2025,Forecasted Sales,
+Padded jacket,Others,Winter,4268.0,937152.59,External,2025,Forecasted Sales,
+Padded jacket,The BLUEPRINT Premium,Summer,64.0,1770.58,Internal,2025,Forecasted Sales,
+Padded jacket,The BLUEPRINT Premium,Winter,103.0,2856.66,Internal,2025,Forecasted Sales,
+Parka,Campbell,Summer,158.0,16429.11,Internal,2025,Forecasted Sales,
+Parka,Campbell,Winter,343.0,35650.81,Internal,2025,Forecasted Sales,
+Parka,Dutch Dandies,Summer,41.0,6032.7,Internal,2025,Forecasted Sales,
+Parka,Dutch Dandies,Winter,31.0,4644.65,Internal,2025,Forecasted Sales,
+Parka,J.C. RAGS,Winter,0.0,0.0,Internal,2025,Forecasted Sales,
+Parka,Others,Summer,67.0,19375.0,External,2025,Forecasted Sales,
+Parka,Others,Winter,2236.0,648907.66,External,2025,Forecasted Sales,
+Polo LS,Campbell,Summer,378.0,12761.13,Internal,2025,Forecasted Sales,
+Polo LS,Campbell,Winter,606.0,20484.97,Internal,2025,Forecasted Sales,
+Polo LS,Donkervoort,Summer,501.0,14564.13,Internal,2025,Forecasted Sales,
+Polo LS,Donkervoort,Winter,460.0,13364.68,Internal,2025,Forecasted Sales,
+Polo LS,Dutch Dandies,Summer,221.0,19704.37,Internal,2025,Forecasted Sales,
+Polo LS,Dutch Dandies,Winter,641.0,57154.06,Internal,2025,Forecasted Sales,
+Polo LS,Others,Summer,1354.0,123623.34,External,2025,Forecasted Sales,
+Polo LS,Others,Winter,2800.0,255600.11,External,2025,Forecasted Sales,
+Polo SS,Campbell,Summer,12424.0,445668.66,Internal,2025,Forecasted Sales,
+Polo SS,Donkervoort,Summer,2976.0,143110.24,Internal,2025,Forecasted Sales,
+Polo SS,Dutch Dandies,Summer,3414.0,230176.23,Internal,2025,Forecasted Sales,
+Polo SS,J.C. RAGS,Summer,2761.0,117530.29,Internal,2025,Forecasted Sales,
+Polo SS,Others,Summer,51054.0,3543060.32,External,2025,Forecasted Sales,
+Polo SS,Others,Winter,7228.0,501596.98,External,2025,Forecasted Sales,
+Polo SS,The BLUEPRINT Premium,Summer,7955.0,206943.1,Internal,2025,Forecasted Sales,
+Pull over half zip,Campbell,Summer,1547.0,86428.59,Internal,2025,Forecasted Sales,
+Pull over half zip,Campbell,Winter,3923.0,219174.59,Internal,2025,Forecasted Sales,
+Pull over half zip,Donkervoort,Winter,257.0,13688.16,Internal,2025,Forecasted Sales,
+Pull over half zip,Dutch Dandies,Winter,308.0,39844.12,Internal,2025,Forecasted Sales,
+Pull over half zip,J.C. RAGS,Winter,1541.0,91108.39,Internal,2025,Forecasted Sales,
+Pull over half zip,Others,Summer,1924.0,200139.51,External,2025,Forecasted Sales,
+Pull over half zip,Others,Winter,12302.0,1279667.67,External,2025,Forecasted Sales,
+Pull over half zip,The BLUEPRINT Premium,Winter,11090.0,380529.06,Internal,2025,Forecasted Sales,
+Pullover rollneck,Campbell,Winter,1013.0,50297.12,Internal,2025,Forecasted Sales,
+Pullover rollneck,Donkervoort,Winter,113.0,4898.93,Internal,2025,Forecasted Sales,
+Pullover rollneck,Dutch Dandies,Winter,614.0,37704.49,Internal,2025,Forecasted Sales,
+Pullover rollneck,J.C. RAGS,Winter,119.0,6120.77,Internal,2025,Forecasted Sales,
+Pullover rollneck,Others,Summer,44.0,4022.38,External,2025,Forecasted Sales,
+Pullover rollneck,Others,Winter,2094.0,192093.39,External,2025,Forecasted Sales,
+Pullover rollneck,The BLUEPRINT Premium,Winter,7192.0,242703.89,Internal,2025,Forecasted Sales,
+Shawl,Campbell,Winter,491.0,8399.97,Internal,2025,Forecasted Sales,
+Shawl,Dutch Dandies,Summer,68.0,3518.95,Internal,2025,Forecasted Sales,
+Shawl,Dutch Dandies,Winter,20.0,1042.65,Internal,2025,Forecasted Sales,
+Shawl,J.C. RAGS,Winter,428.0,6186.22,Internal,2025,Forecasted Sales,
+Shawl,Others,Summer,40.0,1359.92,External,2025,Forecasted Sales,
+Shawl,Others,Winter,1804.0,61138.53,External,2025,Forecasted Sales,
+Short,Campbell,Summer,4998.0,148940.02,Internal,2025,Forecasted Sales,
+Short,Donkervoort,Summer,1671.0,52981.07,Internal,2025,Forecasted Sales,
+Short,Dutch Dandies,Summer,336.0,17934.73,Internal,2025,Forecasted Sales,
+Short,J.C. RAGS,Summer,2360.0,106658.23,Internal,2025,Forecasted Sales,
+Short,Others,Summer,18601.0,1317653.19,External,2025,Forecasted Sales,
+Short,Others,Winter,1171.0,82972.78,External,2025,Forecasted Sales,
+Sneakers,Campbell,Summer,114.0,4216.47,Internal,2025,Forecasted Sales,
+Sneakers,Donkervoort,Summer,84.0,3563.82,Internal,2025,Forecasted Sales,
+Sneakers,Dutch Dandies,Summer,42.0,2825.56,Internal,2025,Forecasted Sales,
+Sneakers,Dutch Dandies,Winter,11.0,726.96,Internal,2025,Forecasted Sales,
+Sneakers,J.C. RAGS,Summer,218.0,11798.59,Internal,2025,Forecasted Sales,
+Sneakers,J.C. RAGS,Winter,241.0,13096.23,Internal,2025,Forecasted Sales,
+Sneakers,Others,Summer,7882.0,1038168.65,External,2025,Forecasted Sales,
+Sneakers,Others,Winter,5049.0,664978.55,External,2025,Forecasted Sales,
+Socks,Dutch Dandies,Winter,1.0,4.83,Internal,2025,Forecasted Sales,
+Socks,Others,Summer,7816.0,102475.31,External,2025,Forecasted Sales,
+Socks,Others,Winter,3891.0,51005.95,External,2025,Forecasted Sales,
+Suit,Dutch Dandies,Summer,644.0,150587.91,Internal,2025,Forecasted Sales,
+Suit,Dutch Dandies,Winter,437.0,102186.12,Internal,2025,Forecasted Sales,
+Suit,Others,Summer,49.0,21714.05,External,2025,Forecasted Sales,
+Suit,Others,Winter,41.0,17894.42,External,2025,Forecasted Sales,
+Suit,Recall,Summer,9422.0,2279186.58,Internal,2025,Forecasted Sales,
+Suit,Recall,Winter,2640.0,638514.49,Internal,2025,Forecasted Sales,
+Suit,Runway PARTY,Summer,128.0,13483.68,Internal,2025,Forecasted Sales,
+Suit,Runway PARTY,Winter,40.0,4241.83,Internal,2025,Forecasted Sales,
+Suspenders,Others,Summer,563.0,26541.07,External,2025,Forecasted Sales,
+Suspenders,Others,Winter,247.0,11652.17,External,2025,Forecasted Sales,
+Sweatshirt,Campbell,Winter,121.0,3517.75,Internal,2025,Forecasted Sales,
+Sweatshirt,Donkervoort,Summer,0.0,1.92,Internal,2025,Forecasted Sales,
+Sweatshirt,Donkervoort,Winter,415.0,12884.79,Internal,2025,Forecasted Sales,
+Sweatshirt,J.C. RAGS,Summer,1029.0,39393.44,Internal,2025,Forecasted Sales,
+Sweatshirt,J.C. RAGS,Winter,481.0,18426.48,Internal,2025,Forecasted Sales,
+Sweatshirt,Others,Summer,2539.0,197190.32,External,2025,Forecasted Sales,
+Sweatshirt,Others,Winter,3402.0,264203.11,External,2025,Forecasted Sales,
+Sweatshirt,The BLUEPRINT Premium,Summer,100.0,2356.32,Internal,2025,Forecasted Sales,
+Sweatshirt,The BLUEPRINT Premium,Winter,93.0,2208.0,Internal,2025,Forecasted Sales,
+Swim short,Donkervoort,Summer,1451.0,34048.63,Internal,2025,Forecasted Sales,
+Swim short,J.C. RAGS,Summer,362.0,9895.11,Internal,2025,Forecasted Sales,
+Swim short,Others,Summer,3632.0,154363.96,External,2025,Forecasted Sales,
+Swim short,Others,Winter,38.0,1626.43,External,2025,Forecasted Sales,
+T-shirt SS,Campbell,Summer,2127.0,47214.49,Internal,2025,Forecasted Sales,
+T-shirt SS,Donkervoort,Summer,1748.0,54488.78,Internal,2025,Forecasted Sales,
+T-shirt SS,Dutch Dandies,Summer,465.0,16697.65,Internal,2025,Forecasted Sales,
+T-shirt SS,Dutch Dandies,Winter,1.0,40.8,Internal,2025,Forecasted Sales,
+T-shirt SS,J.C. RAGS,Summer,5746.0,159408.93,Internal,2025,Forecasted Sales,
+T-shirt SS,J.C. RAGS,Winter,2132.0,59128.23,Internal,2025,Forecasted Sales,
+T-shirt SS,Others,Summer,43818.0,1809515.23,External,2025,Forecasted Sales,
+T-shirt SS,Others,Winter,13367.0,552000.08,External,2025,Forecasted Sales,
+Tie,Dutch Dandies,Summer,305.0,15620.18,Internal,2025,Forecasted Sales,
+Tie,Dutch Dandies,Winter,213.0,10891.85,Internal,2025,Forecasted Sales,
+Tie,Others,Summer,4385.0,212368.28,External,2025,Forecasted Sales,
+Tie,Others,Winter,2319.0,112284.79,External,2025,Forecasted Sales,
+Trendy shirt LS,Others,Winter,12.0,389.78,External,2025,Forecasted Sales,
+Trendy shirt LS,The BLUEPRINT Premium,Summer,14241.0,485238.07,Internal,2025,Forecasted Sales,
+Trendy shirt LS,The BLUEPRINT Premium,Winter,12481.0,425249.6,Internal,2025,Forecasted Sales,
+Trousers,Campbell,Summer,289.0,12444.64,Internal,2025,Forecasted Sales,
+Trousers,Dutch Dandies,Summer,613.0,38779.55,Internal,2025,Forecasted Sales,
+Trousers,Dutch Dandies,Winter,381.0,24122.98,Internal,2025,Forecasted Sales,
+Trousers,J.C. RAGS,Summer,130.0,9399.46,Internal,2025,Forecasted Sales,
+Trousers,J.C. RAGS,Winter,329.0,23913.33,Internal,2025,Forecasted Sales,
+Trousers,Others,Summer,2254.0,249629.72,External,2025,Forecasted Sales,
+Trousers,Others,Winter,3044.0,336993.06,External,2025,Forecasted Sales,
+V-neck sweater,Campbell,Summer,1535.0,68967.36,Internal,2025,Forecasted Sales,
+V-neck sweater,Campbell,Winter,2639.0,118624.41,Internal,2025,Forecasted Sales,
+V-neck sweater,Others,Summer,855.0,66804.45,External,2025,Forecasted Sales,
+V-neck sweater,Others,Winter,1852.0,144619.94,External,2025,Forecasted Sales,
+Wedding suit,Dutch Dandies,Summer,1537.0,1055804.26,Internal,2025,Forecasted Sales,
+Boxershort,The BLUEPRINT Premium,Summer,2.0,34.42,Internal,2025,Forecasted Sales,
+Dress Shirt LS,Runway PARTY,Summer,0.0,7.48,Internal,2025,Forecasted Sales,
+Dress Shirt LS,The BLUEPRINT Premium,Summer,630.0,22132.0,Internal,2025,Forecasted Sales,
+Dress belt,Dutch Dandies,Summer,50.0,3762.8,Internal,2025,Forecasted Sales,
+Dress belt,Recall,Summer,8.0,169.58,Internal,2025,Forecasted Sales,
+Mix & match jacket,Runway PARTY,Summer,768.0,136445.14,Internal,2025,Forecasted Sales,
+Mix & match trousers,Runway PARTY,Summer,920.0,86150.35,Internal,2025,Forecasted Sales,
+Overshirt,Runway PARTY,Summer,98.0,11814.34,Internal,2025,Forecasted Sales,
+Shoe care,Others,Summer,1606.0,19988.9,External,2025,Forecasted Sales,
+Socks,Campbell,Summer,4852.0,32915.26,Internal,2025,Forecasted Sales,
+Wallet,Others,Summer,457.0,27168.58,External,2025,Forecasted Sales,
+Boxershort,The BLUEPRINT Premium,Winter,2.0,34.42,Internal,2025,Forecasted Sales,
+Dress Shirt LS,Runway PARTY,Winter,0.0,7.48,Internal,2025,Forecasted Sales,
+Dress Shirt LS,The BLUEPRINT Premium,Winter,630.0,22132.0,Internal,2025,Forecasted Sales,
+Dress belt,Dutch Dandies,Winter,50.0,3762.8,Internal,2025,Forecasted Sales,
+Dress belt,Recall,Winter,8.0,169.58,Internal,2025,Forecasted Sales,
+Mix & match jacket,Runway PARTY,Winter,768.0,136445.14,Internal,2025,Forecasted Sales,
+Mix & match trousers,Runway PARTY,Winter,920.0,86150.35,Internal,2025,Forecasted Sales,
+Overshirt,Runway PARTY,Winter,98.0,11814.34,Internal,2025,Forecasted Sales,
+Shoe care,Others,Winter,1606.0,19988.9,External,2025,Forecasted Sales,
+Socks,Campbell,Winter,4852.0,32915.26,Internal,2025,Forecasted Sales,
+Wallet,Others,Winter,457.0,27168.58,External,2025,Forecasted Sales,
+5-pocket,Donkervoort,Winter,1.0,38.98,Internal,2024,Sales,
+5-pocket,J.C. RAGS,Winter,141.0,4914.03,Internal,2024,Sales,
+5-pocket,Others,Summer,3543.0,337900.52999999997,External,2024,Sales,
+5-pocket,Others,Winter,5159.0,507215.18,External,2024,Sales,
+Boots,Campbell,Winter,518.0,36135.51,Internal,2024,Sales,
+Boots,Dutch Dandies,Winter,21.0,2735.44,Internal,2024,Sales,
+Boots,Others,Winter,1320.0,167859.42,External,2024,Sales,
+Boots,Recall,Winter,144.0,12544.369999999999,Internal,2024,Sales,
+Boxershort,Others,Summer,332.0,13182.29,External,2024,Sales,
+Boxershort,Others,Winter,3666.0,128506.24,External,2024,Sales,
+Boxershort,The BLUEPRINT Premium,Winter,1.0,35.95,Internal,2024,Sales,
+Cardigan,Campbell,Summer,1124.0,62329.61,Internal,2024,Sales,
+Cardigan,Campbell,Winter,2414.0,161547.66,Internal,2024,Sales,
+Cardigan,Donkervoort,Summer,1008.0,67732.37,Internal,2024,Sales,
+Cardigan,Donkervoort,Winter,1083.0,59541.23,Internal,2024,Sales,
+Cardigan,Dutch Dandies,Summer,283.0,23049.74,Internal,2024,Sales,
+Cardigan,Dutch Dandies,Winter,311.0,17712.56,Internal,2024,Sales,
+Cardigan,J.C. RAGS,Winter,812.0,85434.93,Internal,2024,Sales,
+Cardigan,Others,Summer,3815.0,468012.59,External,2024,Sales,
+Cardigan,Others,Winter,5886.0,759719.42,External,2024,Sales,
+Cardigan,The BLUEPRINT Premium,Winter,2331.0,78595.91,Internal,2024,Sales,
+Casual Shoe,Campbell,Summer,494.0,36024.65,Internal,2024,Sales,
+Casual Shoe,Campbell,Winter,371.0,23975.78,Internal,2024,Sales,
+Casual Shoe,Others,Summer,1001.0,148447.18,External,2024,Sales,
+Casual Shoe,Others,Winter,1695.0,251916.16,External,2024,Sales,
+Casual belt,J.C. RAGS,Summer,150.0,1720.35,Internal,2024,Sales,
+Casual belt,Others,Summer,28.0,1033.1000000000001,External,2024,Sales,
+Casual belt,Others,Winter,5270.0,266621.25,External,2024,Sales,
+Casual shirt LS,Campbell,Summer,8018.0,335387.68,Internal,2024,Sales,
+Casual shirt LS,Campbell,Winter,6914.0,281065.89,Internal,2024,Sales,
+Casual shirt LS,Donkervoort,Winter,80.0,3366.6,Internal,2024,Sales,
+Casual shirt LS,J.C. RAGS,Summer,1912.0,97400.71,Internal,2024,Sales,
+Casual shirt LS,J.C. RAGS,Winter,1202.0,61650.4,Internal,2024,Sales,
+Casual shirt LS,Others,Summer,9857.0,818714.5,External,2024,Sales,
+Casual shirt LS,Others,Winter,14497.0,1186891.47,External,2024,Sales,
+Casual shirt LS,The BLUEPRINT Premium,Winter,3.0,91.78,Internal,2024,Sales,
+Casual shirt SS,Campbell,Summer,7771.0,268557.11,Internal,2024,Sales,
+Casual shirt SS,J.C. RAGS,Summer,1340.0,55980.200000000004,Internal,2024,Sales,
+Casual shirt SS,Others,Summer,6474.0,443065.96,External,2024,Sales,
+Casual shirt SS,Others,Winter,1547.0,115009.39,External,2024,Sales,
+Casual shirt SS,The BLUEPRINT Premium,Summer,57.0,1285.43,Internal,2024,Sales,
+Chino,Campbell,Summer,3.0,67.49,Internal,2024,Sales,
+Chino,Campbell,Winter,1158.0,75493.83,Internal,2024,Sales,
+Chino,Donkervoort,Summer,5.0,134.75,Internal,2024,Sales,
+Chino,Donkervoort,Winter,99.0,3862.9500000000003,Internal,2024,Sales,
+Chino,Dutch Dandies,Summer,430.0,22157.02,Internal,2024,Sales,
+Chino,Dutch Dandies,Winter,410.0,53197.509999999995,Internal,2024,Sales,
+Chino,J.C. RAGS,Summer,1718.0,78092.37,Internal,2024,Sales,
+Chino,J.C. RAGS,Winter,512.0,23433.05,Internal,2024,Sales,
+Chino,Others,Summer,15956.0,1843945.71,External,2024,Sales,
+Chino,Others,Winter,15878.0,1895180.31,External,2024,Sales,
+Coat,Campbell,Winter,419.0,71351.91,Internal,2024,Sales,
+Coat,Dutch Dandies,Winter,331.0,83939.3,Internal,2024,Sales,
+Coat,J.C. RAGS,Winter,195.0,15610.61,Internal,2024,Sales,
+Coat,Nobel,Winter,857.0,144345.9,Internal,2024,Sales,
+Coat,Others,Summer,162.0,27630.96,External,2024,Sales,
+Coat,Others,Winter,570.0,126701.06,External,2024,Sales,
+Coat,Recall,Winter,1225.0,204911.3,Internal,2024,Sales,
+Crew-neck sweater,Campbell,Summer,569.0,25659.5,Internal,2024,Sales,
+Crew-neck sweater,Campbell,Winter,1254.0,73524.08,Internal,2024,Sales,
+Crew-neck sweater,Donkervoort,Summer,669.0,37597.08,Internal,2024,Sales,
+Crew-neck sweater,Donkervoort,Winter,164.0,7237.58,Internal,2024,Sales,
+Crew-neck sweater,Dutch Dandies,Summer,1381.0,94890.65000000001,Internal,2024,Sales,
+Crew-neck sweater,Dutch Dandies,Winter,638.0,61410.23,Internal,2024,Sales,
+Crew-neck sweater,J.C. RAGS,Summer,1672.0,69762.45,Internal,2024,Sales,
+Crew-neck sweater,J.C. RAGS,Winter,1530.0,91577.48,Internal,2024,Sales,
+Crew-neck sweater,Others,Summer,3673.0,315845.19,External,2024,Sales,
+Crew-neck sweater,Others,Winter,10435.0,1005177.39,External,2024,Sales,
+Crew-neck sweater,The BLUEPRINT Premium,Winter,8551.0,315414.11,Internal,2024,Sales,
+Dress Shirt LS,Donkervoort,Summer,11.0,277.71999999999997,Internal,2024,Sales,
+Dress Shirt LS,Dutch Dandies,Summer,1103.0,88305.87,Internal,2024,Sales,
+Dress Shirt LS,Dutch Dandies,Winter,3341.0,322280.91000000003,Internal,2024,Sales,
+Dress Shirt LS,Others,Summer,11266.0,933869.19,External,2024,Sales,
+Dress Shirt LS,Others,Winter,27981.0,2848964.05,External,2024,Sales,
+Dress Shirt LS,Recall,Summer,26.0,601.61,Internal,2024,Sales,
+Dress Shirt LS,Recall,Winter,4112.0,196803.86,Internal,2024,Sales,
+Dress Shoe,Others,Summer,1037.0,179604.18,External,2024,Sales,
+Dress Shoe,Others,Winter,2554.0,427917.58999999997,External,2024,Sales,
+Dress Shoe,Recall,Summer,555.0,42723.99,Internal,2024,Sales,
+Dress Shoe,Recall,Winter,1098.0,89305.06,Internal,2024,Sales,
+Dress belt,Dutch Dandies,Winter,5.0,359.13,Internal,2024,Sales,
+Dress belt,Others,Summer,876.0,65974.23,External,2024,Sales,
+Dress belt,Others,Winter,8179.0,440878.52,External,2024,Sales,
+Dress belt,Recall,Winter,2.0,39.9,Internal,2024,Sales,
+Hoodie,Donkervoort,Summer,1.0,25.0,Internal,2024,Sales,
+Hoodie,Donkervoort,Winter,7.0,312.70000000000005,Internal,2024,Sales,
+Hoodie,Dutch Dandies,Winter,21.0,910.59,Internal,2024,Sales,
+Hoodie,J.C. RAGS,Summer,100.0,2298.82,Internal,2024,Sales,
+Hoodie,J.C. RAGS,Winter,297.0,15459.26,Internal,2024,Sales,
+Hoodie,Others,Summer,157.0,17950.54,External,2024,Sales,
+Hoodie,Others,Winter,780.0,71578.58,External,2024,Sales,
+Hoodie,The BLUEPRINT Premium,Summer,107.0,3079.5099999999998,Internal,2024,Sales,
+Jack outdoor,Campbell,Summer,1652.0,155181.93,Internal,2024,Sales,
+Jack outdoor,Campbell,Winter,40.0,1909.99,Internal,2024,Sales,
+Jack outdoor,Donkervoort,Summer,99.0,4876.650000000001,Internal,2024,Sales,
+Jack outdoor,J.C. RAGS,Summer,634.0,36552.24,Internal,2024,Sales,
+Jack outdoor,J.C. RAGS,Winter,236.0,14409.93,Internal,2024,Sales,
+Jack outdoor,Others,Summer,4191.0,731479.91,External,2024,Sales,
+Jack outdoor,Others,Winter,1177.0,265874.9,External,2024,Sales,
+Jacket,Campbell,Summer,1818.0,249421.34,Internal,2024,Sales,
+Jacket,Campbell,Winter,1208.0,147853.88,Internal,2024,Sales,
+Jacket,Donkervoort,Winter,1.0,67.97,Internal,2024,Sales,
+Jacket,Dutch Dandies,Summer,1907.0,360101.52999999997,Internal,2024,Sales,
+Jacket,Dutch Dandies,Winter,1387.0,304543.62,Internal,2024,Sales,
+Jacket,Others,Summer,1591.0,335260.68,External,2024,Sales,
+Jacket,Others,Winter,632.0,134645.57,External,2024,Sales,
+Jacket,The BLUEPRINT Premium,Summer,485.0,71239.83,Internal,2024,Sales,
+Jacket,The BLUEPRINT Premium,Winter,419.0,29913.280000000002,Internal,2024,Sales,
+Jeans,J.C. RAGS,Summer,3892.0,290817.16,Internal,2024,Sales,
+Jeans,J.C. RAGS,Winter,1408.0,134468.08,Internal,2024,Sales,
+Jeans,Others,Summer,6729.0,784596.76,External,2024,Sales,
+Jeans,Others,Winter,21006.0,2497265.9,External,2024,Sales,
+Mix & match jacket,Campbell,Winter,124.0,20631.95,Internal,2024,Sales,
+Mix & match jacket,Dutch Dandies,Summer,804.0,172190.91,Internal,2024,Sales,
+Mix & match jacket,Dutch Dandies,Winter,525.0,133469.13,Internal,2024,Sales,
+Mix & match jacket,Others,Summer,1243.0,264951.81,External,2024,Sales,
+Mix & match jacket,Others,Winter,4813.0,1118738.56,External,2024,Sales,
+Mix & match jacket,Recall,Summer,175.0,13334.2,Internal,2024,Sales,
+Mix & match jacket,Recall,Winter,321.0,22423.9,Internal,2024,Sales,
+Mix & match jacket,The BLUEPRINT Premium,Summer,562.0,86015.87,Internal,2024,Sales,
+Mix & match jacket,The BLUEPRINT Premium,Winter,539.0,93697.78,Internal,2024,Sales,
+Mix & match trousers,Campbell,Winter,92.0,7899.47,Internal,2024,Sales,
+Mix & match trousers,Dutch Dandies,Summer,1111.0,99036.63,Internal,2024,Sales,
+Mix & match trousers,Dutch Dandies,Winter,433.0,46461.1,Internal,2024,Sales,
+Mix & match trousers,Others,Summer,1418.0,152190.6,External,2024,Sales,
+Mix & match trousers,Others,Winter,5089.0,599370.69,External,2024,Sales,
+Mix & match trousers,Recall,Summer,162.0,6431.360000000001,Internal,2024,Sales,
+Mix & match trousers,Recall,Winter,464.0,16656.84,Internal,2024,Sales,
+Mix & match trousers,The BLUEPRINT Premium,Summer,824.0,66616.3,Internal,2024,Sales,
+Mix & match trousers,The BLUEPRINT Premium,Winter,373.0,34239.88,Internal,2024,Sales,
+Others,Campbell,Summer,460.0,25859.41,Internal,2024,Sales,
+Others,Campbell,Winter,664.0,23496.1,Internal,2024,Sales,
+Others,Donkervoort,Summer,676.0,15517.77,Internal,2024,Sales,
+Others,Donkervoort,Winter,122.0,5495.51,Internal,2024,Sales,
+Others,Dutch Dandies,Summer,416.0,50330.71,Internal,2024,Sales,
+Others,Dutch Dandies,Winter,297.0,37332.01,Internal,2024,Sales,
+Others,J.C. RAGS,Summer,897.0,31885.84,Internal,2024,Sales,
+Others,J.C. RAGS,Winter,760.0,20558.899999999998,Internal,2024,Sales,
+Others,Others,Summer,5216.0,585641.5599999999,External,2024,Sales,
+Others,Others,Winter,9549.0,577646.43,External,2024,Sales,
+Others,Recall,Summer,209.0,14704.29,Internal,2024,Sales,
+Others,Recall,Winter,435.0,86285.78,Internal,2024,Sales,
+Others,The BLUEPRINT Premium,Summer,808.0,26886.04,Internal,2024,Sales,
+Others,The BLUEPRINT Premium,Winter,13.0,424.39000000000004,Internal,2024,Sales,
+Overshirt,Campbell,Summer,74.0,2818.08,Internal,2024,Sales,
+Overshirt,Campbell,Winter,838.0,51390.54,Internal,2024,Sales,
+Overshirt,Donkervoort,Winter,128.0,4872.83,Internal,2024,Sales,
+Overshirt,Dutch Dandies,Summer,304.0,20339.79,Internal,2024,Sales,
+Overshirt,Dutch Dandies,Winter,96.0,21929.61,Internal,2024,Sales,
+Overshirt,J.C. RAGS,Summer,436.0,18658.97,Internal,2024,Sales,
+Overshirt,J.C. RAGS,Winter,1247.0,86404.53,Internal,2024,Sales,
+Overshirt,Others,Summer,2733.0,337649.01,External,2024,Sales,
+Overshirt,Others,Winter,3952.0,541582.34,External,2024,Sales,
+Padded jacket,Campbell,Winter,790.0,58955.21,Internal,2024,Sales,
+Padded jacket,Donkervoort,Winter,557.0,49859.64,Internal,2024,Sales,
+Padded jacket,J.C. RAGS,Summer,321.0,23340.4,Internal,2024,Sales,
+Padded jacket,J.C. RAGS,Winter,171.0,17009.3,Internal,2024,Sales,
+Padded jacket,Others,Summer,15.0,2486.6499999999996,External,2024,Sales,
+Padded jacket,Others,Winter,3984.0,908397.35,External,2024,Sales,
+Padded jacket,The BLUEPRINT Premium,Summer,2.0,65.94,Internal,2024,Sales,
+Padded jacket,The BLUEPRINT Premium,Winter,102.0,2849.2599999999998,Internal,2024,Sales,
+Parka,Campbell,Summer,179.0,9859.82,Internal,2024,Sales,
+Parka,Campbell,Winter,479.0,65814.41,Internal,2024,Sales,
+Parka,Dutch Dandies,Summer,23.0,3410.8199999999997,Internal,2024,Sales,
+Parka,J.C. RAGS,Winter,2.0,164.95,Internal,2024,Sales,
+Parka,Others,Winter,2140.0,680758.87,External,2024,Sales,
+Polo LS,Campbell,Summer,848.0,34640.76,Internal,2024,Sales,
+Polo LS,Campbell,Winter,623.0,17940.73,Internal,2024,Sales,
+Polo LS,Donkervoort,Summer,320.0,9048.38,Internal,2024,Sales,
+Polo LS,Donkervoort,Winter,22.0,977.39,Internal,2024,Sales,
+Polo LS,Dutch Dandies,Summer,47.0,1633.76,Internal,2024,Sales,
+Polo LS,Dutch Dandies,Winter,653.0,71162.93,Internal,2024,Sales,
+Polo LS,Others,Summer,1187.0,114689.66,External,2024,Sales,
+Polo LS,Others,Winter,3154.0,302419.56,External,2024,Sales,
+Polo SS,Campbell,Summer,8111.0,314009.05,Internal,2024,Sales,
+Polo SS,Donkervoort,Summer,3638.0,192385.25,Internal,2024,Sales,
+Polo SS,Dutch Dandies,Summer,2595.0,184693.22,Internal,2024,Sales,
+Polo SS,J.C. RAGS,Summer,1886.0,67424.03,Internal,2024,Sales,
+Polo SS,Others,Summer,39321.0,2815680.82,External,2024,Sales,
+Polo SS,Others,Winter,11423.0,796623.25,External,2024,Sales,
+Polo SS,The BLUEPRINT Premium,Summer,6257.0,157048.02,Internal,2024,Sales,
+Pull over half zip,Campbell,Summer,702.0,36702.21,Internal,2024,Sales,
+Pull over half zip,Campbell,Winter,4332.0,231669.7,Internal,2024,Sales,
+Pull over half zip,Donkervoort,Winter,604.0,35033.3,Internal,2024,Sales,
+Pull over half zip,Dutch Dandies,Winter,91.0,12055.349999999999,Internal,2024,Sales,
+Pull over half zip,J.C. RAGS,Winter,1321.0,88672.25,Internal,2024,Sales,
+Pull over half zip,Others,Summer,2142.0,272781.16,External,2024,Sales,
+Pull over half zip,Others,Winter,13026.0,1462809.72,External,2024,Sales,
+Pull over half zip,The BLUEPRINT Premium,Winter,11766.0,420341.01,Internal,2024,Sales,
+Pullover rollneck,Campbell,Winter,755.0,41736.55,Internal,2024,Sales,
+Pullover rollneck,Donkervoort,Winter,3.0,130.06,Internal,2024,Sales,
+Pullover rollneck,Dutch Dandies,Winter,588.0,36671.36,Internal,2024,Sales,
+Pullover rollneck,J.C. RAGS,Winter,294.0,15678.01,Internal,2024,Sales,
+Pullover rollneck,Others,Summer,52.0,5895.41,External,2024,Sales,
+Pullover rollneck,Others,Winter,2293.0,229906.37,External,2024,Sales,
+Pullover rollneck,The BLUEPRINT Premium,Winter,7571.0,266938.51,Internal,2024,Sales,
+Shawl,Campbell,Winter,481.0,9476.8,Internal,2024,Sales,
+Shawl,Dutch Dandies,Summer,5.0,165.18,Internal,2024,Sales,
+Shawl,Dutch Dandies,Winter,16.0,1579.22,Internal,2024,Sales,
+Shawl,J.C. RAGS,Winter,272.0,4545.96,Internal,2024,Sales,
+Shawl,Others,Summer,5.0,59.97,External,2024,Sales,
+Shawl,Others,Winter,1487.0,56071.36,External,2024,Sales,
+Shoe care,Others,Winter,3685.0,46578.36,External,2024,Sales,
+Short,Campbell,Summer,4039.0,127159.73,Internal,2024,Sales,
+Short,Donkervoort,Summer,1129.0,39188.39,Internal,2024,Sales,
+Short,Dutch Dandies,Summer,238.0,13333.34,Internal,2024,Sales,
+Short,J.C. RAGS,Summer,1728.0,81625.75,Internal,2024,Sales,
+Short,Others,Summer,15918.0,1187808.66,External,2024,Sales,
+Short,Others,Winter,841.0,74499.18000000001,External,2024,Sales,
+Sneakers,Campbell,Summer,22.0,835.48,Internal,2024,Sales,
+Sneakers,Donkervoort,Summer,26.0,1147.2,Internal,2024,Sales,
+Sneakers,Dutch Dandies,Summer,21.0,1715.23,Internal,2024,Sales,
+Sneakers,Dutch Dandies,Winter,37.0,2208.06,Internal,2024,Sales,
+Sneakers,J.C. RAGS,Summer,294.0,20418.41,Internal,2024,Sales,
+Sneakers,J.C. RAGS,Winter,407.0,19382.15,Internal,2024,Sales,
+Sneakers,Others,Summer,6588.0,947123.6,External,2024,Sales,
+Sneakers,Others,Winter,5453.0,807522.53,External,2024,Sales,
+Socks,Campbell,Winter,8851.0,60761.82,Internal,2024,Sales,
+Socks,Dutch Dandies,Winter,31.0,724.5799999999999,Internal,2024,Sales,
+Socks,Others,Summer,186.0,2813.77,External,2024,Sales,
+Socks,Others,Winter,12916.0,198630.4,External,2024,Sales,
+Suit,Dutch Dandies,Summer,278.0,79563.53,Internal,2024,Sales,
+Suit,Dutch Dandies,Winter,294.0,76147.81,Internal,2024,Sales,
+Suit,Others,Summer,41.0,18528.93,External,2024,Sales,
+Suit,Others,Winter,5.0,1922.7800000000002,External,2024,Sales,
+Suit,Recall,Summer,457.0,113531.09999999999,Internal,2024,Sales,
+Suit,Recall,Winter,7418.0,1814150.94,Internal,2024,Sales,
+Suit,Runway PARTY,Winter,43.0,8049.71,Internal,2024,Sales,
+Suspenders,Others,Summer,11.0,513.4200000000001,External,2024,Sales,
+Suspenders,Others,Winter,717.0,34566.17,External,2024,Sales,
+Sweatshirt,Campbell,Winter,96.0,2914.43,Internal,2024,Sales,
+Sweatshirt,Donkervoort,Winter,701.0,22487.92,Internal,2024,Sales,
+Sweatshirt,J.C. RAGS,Summer,470.0,19842.78,Internal,2024,Sales,
+Sweatshirt,J.C. RAGS,Winter,580.0,20811.9,Internal,2024,Sales,
+Sweatshirt,Others,Summer,1677.0,139012.22,External,2024,Sales,
+Sweatshirt,Others,Winter,3645.0,308070.66,External,2024,Sales,
+Sweatshirt,The BLUEPRINT Premium,Summer,67.0,1724.78,Internal,2024,Sales,
+Sweatshirt,The BLUEPRINT Premium,Winter,25.0,628.09,Internal,2024,Sales,
+Swim short,Donkervoort,Summer,856.0,22973.010000000002,Internal,2024,Sales,
+Swim short,J.C. RAGS,Summer,147.0,3667.92,Internal,2024,Sales,
+Swim short,Others,Summer,3693.0,167785.84,External,2024,Sales,
+Swim short,Others,Winter,18.0,422.87,External,2024,Sales,
+T-shirt SS,Campbell,Summer,2394.0,57188.3,Internal,2024,Sales,
+T-shirt SS,Donkervoort,Summer,2918.0,100269.79000000001,Internal,2024,Sales,
+T-shirt SS,Dutch Dandies,Summer,245.0,8456.15,Internal,2024,Sales,
+T-shirt SS,Dutch Dandies,Winter,4.0,331.87,Internal,2024,Sales,
+T-shirt SS,J.C. RAGS,Summer,2479.0,66962.31,Internal,2024,Sales,
+T-shirt SS,J.C. RAGS,Winter,3090.0,79445.74,Internal,2024,Sales,
+T-shirt SS,Others,Summer,20880.0,951638.36,External,2024,Sales,
+T-shirt SS,Others,Winter,29357.0,1171000.43,External,2024,Sales,
+Tie,Dutch Dandies,Summer,106.0,4034.39,Internal,2024,Sales,
+Tie,Dutch Dandies,Winter,147.0,11112.92,Internal,2024,Sales,
+Tie,Others,Summer,2533.0,129080.64,External,2024,Sales,
+Tie,Others,Winter,3694.0,175516.23,External,2024,Sales,
+Trendy shirt LS,Others,Winter,35.0,1433.43,External,2024,Sales,
+Trendy shirt LS,The BLUEPRINT Premium,Summer,16460.0,589702.49,Internal,2024,Sales,
+Trendy shirt LS,The BLUEPRINT Premium,Winter,12001.0,421152.72,Internal,2024,Sales,
+Trousers,Campbell,Summer,30.0,859.41,Internal,2024,Sales,
+Trousers,Dutch Dandies,Summer,225.0,21197.29,Internal,2024,Sales,
+Trousers,Dutch Dandies,Winter,165.0,19646.21,Internal,2024,Sales,
+Trousers,J.C. RAGS,Summer,68.0,5421.0,Internal,2024,Sales,
+Trousers,J.C. RAGS,Winter,241.0,16005.08,Internal,2024,Sales,
+Trousers,Others,Summer,1173.0,122133.56,External,2024,Sales,
+Trousers,Others,Winter,3389.0,409401.71,External,2024,Sales,
+V-neck sweater,Campbell,Summer,524.0,24932.41,Internal,2024,Sales,
+V-neck sweater,Campbell,Winter,256.0,17949.4,Internal,2024,Sales,
+V-neck sweater,Others,Summer,31.0,2798.63,External,2024,Sales,
+V-neck sweater,Others,Winter,560.0,44876.73,External,2024,Sales,
+Wallet,Others,Winter,1099.0,67439.87,External,2024,Sales,
+Wedding suit,Dutch Dandies,Summer,15.0,11515.57,Internal,2024,Sales,
+Wedding suit,Dutch Dandies,Winter,892.0,638653.87,Internal,2024,Sales,
+Boots,Campbell,Winter,172.0,15643.3994140625,,2025,Ordered Inventory,4859.0
+Boots,Recall,Winter,250.0,19487.5,,2025,Ordered Inventory,7787.0
+Cardigan,Campbell,Summer,1025.0,143478.734375,,2025,Ordered Inventory,27830.7
+Cardigan,Dutch Dandies,Summer,420.0,62979.0,,2025,Ordered Inventory,11760.0
+Casual Shoe,Campbell,Summer,300.0,35985.0,,2025,Ordered Inventory,8475.0
+Casual shirt LS,Campbell,Summer,6491.0,518955.4375,,2025,Ordered Inventory,111464.31
+Casual shirt LS,J.C. RAGS,Summer,625.0,74968.75,,2025,Ordered Inventory,13299.65
+Casual shirt SS,Campbell,Summer,7441.0,520497.9375,,2025,Ordered Inventory,113595.6
+Casual shirt SS,J.C. RAGS,Summer,1102.0,99124.8984375,,2025,Ordered Inventory,22848.6
+Chino,Campbell,Summer,506.0,50574.69921875,,2025,Ordered Inventory,10423.6
+Chino,Campbell,Winter,556.0,27772.201171875,,2025,Ordered Inventory,11521.35
+Chino,Dutch Dandies,Summer,1174.0,176041.296875,,2025,Ordered Inventory,38426.7
+Chino,Dutch Dandies,Winter,307.0,23009.6484375,,2025,Ordered Inventory,9117.9
+Chino,J.C. RAGS,Summer,882.0,40283.8984375,,2025,Ordered Inventory,18468.451
+Chino,J.C. RAGS,Winter,3.0,269.8499755859375,,2025,Ordered Inventory,75.0
+Coat,Campbell,Winter,781.0,89775.953125,,2025,Ordered Inventory,35745.95
+Crew-neck sweater,Campbell,Summer,772.0,77161.3984375,,2025,Ordered Inventory,19184.2
+Crew-neck sweater,Dutch Dandies,Summer,402.0,48219.8984375,,2025,Ordered Inventory,8844.0
+Crew-neck sweater,Dutch Dandies,Winter,6735.0,807863.25,,2025,Ordered Inventory,144802.5
+Dress Shirt LS,Dutch Dandies,Summer,1945.0,244322.75,,2025,Ordered Inventory,49035.89
+Dress Shirt LS,The BLUEPRINT Premium,Summer,13528.0,1081563.625,,2025,Ordered Inventory,259401.6
+Dress Shirt LS,The BLUEPRINT Premium,Winter,928.0,46161.6015625,,2025,Ordered Inventory,12997.52
+Dress Shoe,Recall,Summer,1050.0,125947.5,,2025,Ordered Inventory,32392.5
+Jack outdoor,Campbell,Summer,875.0,132156.25,,2025,Ordered Inventory,24167.25
+Jacket,Campbell,Summer,1515.0,335774.25,,2025,Ordered Inventory,51801.75
+Jacket,Dutch Dandies,Summer,1587.0,604520.6875,,2025,Ordered Inventory,66500.03
+Jeans,J.C. RAGS,Summer,1627.0,187658.640625,,2025,Ordered Inventory,42725.82
+Mix & match jacket,Runway PARTY,Summer,2721.0,494053.9375,,2025,Ordered Inventory,94510.45
+Mix & match trousers,Dutch Dandies,Summer,225.0,40488.75,,2025,Ordered Inventory,5456.25
+Mix & match trousers,Runway PARTY,Summer,3851.0,377747.4375,,2025,Ordered Inventory,69982.75
+Others,Campbell,Summer,8457.0,456913.15625,,2025,Ordered Inventory,150665.22
+Others,Campbell,Winter,10238.0,421106.09375,,2025,Ordered Inventory,224257.44
+Others,Donkervoort,Summer,1112.0,25129.400390625,,2025,Ordered Inventory,14197.06
+Others,Dutch Dandies,Summer,3781.0,778863.125,,2025,Ordered Inventory,217358.34
+Others,Dutch Dandies,Winter,5964.0,710140.25,,2025,Ordered Inventory,278313.16
+Others,J.C. RAGS,Summer,4737.0,186601.15625,,2025,Ordered Inventory,74764.47
+Others,J.C. RAGS,Winter,4646.0,239044.703125,,2025,Ordered Inventory,102975.69
+Others,Nobel,Winter,302.0,45284.8984375,,2025,Ordered Inventory,24086.77
+Others,Recall,Summer,1062.0,154036.90625,,2025,Ordered Inventory,33615.44
+Others,Recall,Winter,2919.0,442304.0625,,2025,Ordered Inventory,151608.64
+Others,Runway PARTY,Winter,357.0,26757.1484375,,2025,Ordered Inventory,20396.37
+Others,The BLUEPRINT Premium,Summer,3594.0,108882.3046875,,2025,Ordered Inventory,49272.918
+Others,The BLUEPRINT Premium,Winter,29281.0,1244540.0,,2025,Ordered Inventory,373739.5
+Overshirt,Campbell,Summer,411.0,57255.453125,,2025,Ordered Inventory,11076.0
+Overshirt,Campbell,Winter,1.0,55.95000076293945,,2025,Ordered Inventory,25.7
+Overshirt,J.C. RAGS,Summer,1559.0,214392.046875,,2025,Ordered Inventory,34680.6
+Overshirt,J.C. RAGS,Winter,528.0,22494.599609375,,2025,Ordered Inventory,12731.49
+Overshirt,Runway PARTY,Summer,1233.0,165418.34375,,2025,Ordered Inventory,34462.35
+Parka,Campbell,Winter,131.0,15058.44921875,,2025,Ordered Inventory,5701.52
+Polo SS,Campbell,Summer,9980.0,761481.0,,2025,Ordered Inventory,136609.89
+Polo SS,Dutch Dandies,Summer,3347.0,414022.65625,,2025,Ordered Inventory,76465.7
+Polo SS,J.C. RAGS,Summer,2414.0,236819.296875,,2025,Ordered Inventory,47843.3
+Polo SS,The BLUEPRINT Premium,Summer,24097.0,701875.1875,,2025,Ordered Inventory,198647.05
+Pull over half zip,Campbell,Summer,3348.0,267672.59375,,2025,Ordered Inventory,45198.0
+Pull over half zip,Dutch Dandies,Winter,2197.0,307470.15625,,2025,Ordered Inventory,56023.5
+Pullover rollneck,The BLUEPRINT Premium,Winter,37689.0,1204163.625,,2025,Ordered Inventory,331663.22
+Shawl,Dutch Dandies,Summer,74.0,6656.2998046875,,2025,Ordered Inventory,1383.8
+Short,Campbell,Summer,6243.0,421362.8125,,2025,Ordered Inventory,83794.97
+Short,Donkervoort,Summer,107.0,2241.64990234375,,2025,Ordered Inventory,1621.04
+Short,Dutch Dandies,Summer,2.0,319.8999938964844,,2025,Ordered Inventory,0.0
+Short,J.C. RAGS,Summer,1503.0,109450.84375,,2025,Ordered Inventory,25670.23
+Sneakers,J.C. RAGS,Summer,55.0,3297.25,,2025,Ordered Inventory,1641.75
+Suit,Recall,Summer,2314.0,694084.3125,,2025,Ordered Inventory,147322.98
+Sweatshirt,J.C. RAGS,Summer,743.0,74262.8515625,,2025,Ordered Inventory,10327.7
+Swim short,J.C. RAGS,Summer,376.0,30061.19921875,,2025,Ordered Inventory,6561.2
+T-shirt SS,Campbell,Summer,1054.0,84267.296875,,2025,Ordered Inventory,14545.2
+T-shirt SS,Dutch Dandies,Summer,404.0,28259.80078125,,2025,Ordered Inventory,4848.0
+T-shirt SS,J.C. RAGS,Summer,2946.0,151192.703125,,2025,Ordered Inventory,23716.29
+Tie,Dutch Dandies,Summer,736.0,46523.19921875,,2025,Ordered Inventory,12867.24
+Trendy shirt LS,The BLUEPRINT Premium,Summer,6088.0,486735.59375,,2025,Ordered Inventory,82706.35
+Trousers,Campbell,Summer,818.0,73579.1015625,,2025,Ordered Inventory,15133.0
+Trousers,Dutch Dandies,Summer,199.0,33820.05078125,,2025,Ordered Inventory,4825.75
+Trousers,J.C. RAGS,Summer,1283.0,151835.84375,,2025,Ordered Inventory,26372.2
+Trousers,J.C. RAGS,Winter,510.0,61174.5,,2025,Ordered Inventory,8823.0
+V-neck sweater,Campbell,Summer,997.0,79710.1484375,,2025,Ordered Inventory,11964.0
+Boots,Campbell,Winter,-234.0,15643.3994140625,,2025,Lost Sales Opportunity,4859.0
+Cardigan,Campbell,Summer,-735.0,143478.734375,,2025,Lost Sales Opportunity,27830.7
+Cardigan,Campbell,Winter,-2851.0,0.0,,2025,Lost Sales Opportunity,0.0
+Casual Shoe,Campbell,Summer,77.0,35985.0,,2025,Leftover Inventory,8475.0
+Casual Shoe,Campbell,Winter,-448.0,0.0,,2025,Lost Sales Opportunity,0.0
+Casual shirt LS,Campbell,Summer,862.0,518955.4375,,2025,Leftover Inventory,111464.31
+Casual shirt LS,Campbell,Winter,-9108.0,0.0,,2025,Lost Sales Opportunity,0.0
+Casual shirt SS,Campbell,Summer,-1010.0,520497.9375,,2025,Lost Sales Opportunity,113595.6
+Chino,Campbell,Summer,92.0,50574.69921875,,2025,Leftover Inventory,10423.6
+Chino,Campbell,Winter,-140.0,27772.201171875,,2025,Lost Sales Opportunity,11521.35
+Coat,Campbell,Winter,142.0,89775.953125,,2025,Leftover Inventory,35745.95
+Crew-neck sweater,Campbell,Summer,268.0,77161.3984375,,2025,Leftover Inventory,19184.2
+Crew-neck sweater,Campbell,Winter,-1922.0,0.0,,2025,Lost Sales Opportunity,0.0
+Jack outdoor,Campbell,Summer,-726.0,132156.25,,2025,Lost Sales Opportunity,24167.25
+Jack outdoor,Campbell,Winter,-137.0,0.0,,2025,Lost Sales Opportunity,0.0
+Jacket,Campbell,Summer,-515.0,335774.25,,2025,Lost Sales Opportunity,51801.75
+Jacket,Campbell,Winter,-1347.0,0.0,,2025,Lost Sales Opportunity,0.0
+Mix & match jacket,Campbell,Winter,-343.0,0.0,,2025,Lost Sales Opportunity,0.0
+Mix & match trousers,Campbell,Winter,-283.0,0.0,,2025,Lost Sales Opportunity,0.0
+Others,Campbell,Summer,7797.0,456913.15625,,2025,Leftover Inventory,150665.22
+Others,Campbell,Winter,9742.0,421106.09375,,2025,Leftover Inventory,224257.44
+Overshirt,Campbell,Summer,98.0,57255.453125,,2025,Leftover Inventory,11076.0
+Overshirt,Campbell,Winter,-648.0,55.95000076293945,,2025,Lost Sales Opportunity,25.7
+Padded jacket,Campbell,Summer,-118.0,0.0,,2025,Lost Sales Opportunity,0.0
+Padded jacket,Campbell,Winter,-772.0,0.0,,2025,Lost Sales Opportunity,0.0
+Parka,Campbell,Summer,-158.0,0.0,,2025,Lost Sales Opportunity,0.0
+Parka,Campbell,Winter,-212.0,15058.44921875,,2025,Lost Sales Opportunity,5701.52
+Polo LS,Campbell,Summer,-378.0,0.0,,2025,Lost Sales Opportunity,0.0
+Polo LS,Campbell,Winter,-606.0,0.0,,2025,Lost Sales Opportunity,0.0
+Polo SS,Campbell,Summer,-2444.0,761481.0,,2025,Lost Sales Opportunity,136609.89
+Pull over half zip,Campbell,Summer,1801.0,267672.59375,,2025,Leftover Inventory,45198.0
+Pull over half zip,Campbell,Winter,-3923.0,0.0,,2025,Lost Sales Opportunity,0.0
+Pullover rollneck,Campbell,Winter,-1013.0,0.0,,2025,Lost Sales Opportunity,0.0
+Shawl,Campbell,Winter,-491.0,0.0,,2025,Lost Sales Opportunity,0.0
+Short,Campbell,Summer,1245.0,421362.8125,,2025,Leftover Inventory,83794.97
+Sneakers,Campbell,Summer,-114.0,0.0,,2025,Lost Sales Opportunity,0.0
+Socks,Campbell,Summer,-4852.0,0.0,,2025,Lost Sales Opportunity,0.0
+Socks,Campbell,Winter,-4852.0,0.0,,2025,Lost Sales Opportunity,0.0
+Sweatshirt,Campbell,Winter,-121.0,0.0,,2025,Lost Sales Opportunity,0.0
+T-shirt SS,Campbell,Summer,-1073.0,84267.296875,,2025,Lost Sales Opportunity,14545.2
+Trousers,Campbell,Summer,529.0,73579.1015625,,2025,Leftover Inventory,15133.0
+V-neck sweater,Campbell,Summer,-538.0,79710.1484375,,2025,Lost Sales Opportunity,11964.0
+V-neck sweater,Campbell,Winter,-2639.0,0.0,,2025,Lost Sales Opportunity,0.0
+5-pocket,Donkervoort,Winter,-6.0,0.0,,2025,Lost Sales Opportunity,0.0
+Cardigan,Donkervoort,Summer,-556.0,0.0,,2025,Lost Sales Opportunity,0.0
+Cardigan,Donkervoort,Winter,-1151.0,0.0,,2025,Lost Sales Opportunity,0.0
+Casual shirt LS,Donkervoort,Summer,-78.0,0.0,,2025,Lost Sales Opportunity,0.0
+Casual shirt LS,Donkervoort,Winter,-173.0,0.0,,2025,Lost Sales Opportunity,0.0
+Chino,Donkervoort,Summer,-63.0,0.0,,2025,Lost Sales Opportunity,0.0
+Chino,Donkervoort,Winter,-111.0,0.0,,2025,Lost Sales Opportunity,0.0
+Crew-neck sweater,Donkervoort,Summer,-75.0,0.0,,2025,Lost Sales Opportunity,0.0
+Crew-neck sweater,Donkervoort,Winter,-412.0,0.0,,2025,Lost Sales Opportunity,0.0
+Dress Shirt LS,Donkervoort,Summer,-6.0,0.0,,2025,Lost Sales Opportunity,0.0
+Dress Shirt LS,Donkervoort,Winter,-1.0,0.0,,2025,Lost Sales Opportunity,0.0
+Hoodie,Donkervoort,Summer,-19.0,0.0,,2025,Lost Sales Opportunity,0.0
+Hoodie,Donkervoort,Winter,-55.0,0.0,,2025,Lost Sales Opportunity,0.0
+Jack outdoor,Donkervoort,Summer,-182.0,0.0,,2025,Lost Sales Opportunity,0.0
+Jack outdoor,Donkervoort,Winter,-44.0,0.0,,2025,Lost Sales Opportunity,0.0
+Jacket,Donkervoort,Summer,-8.0,0.0,,2025,Lost Sales Opportunity,0.0
+Jacket,Donkervoort,Winter,-11.0,0.0,,2025,Lost Sales Opportunity,0.0
+Others,Donkervoort,Summer,704.0,25129.400390625,,2025,Leftover Inventory,14197.06
+Others,Donkervoort,Winter,-130.0,0.0,,2025,Lost Sales Opportunity,0.0
+Overshirt,Donkervoort,Winter,-111.0,0.0,,2025,Lost Sales Opportunity,0.0
+Padded jacket,Donkervoort,Summer,-68.0,0.0,,2025,Lost Sales Opportunity,0.0
+Padded jacket,Donkervoort,Winter,-596.0,0.0,,2025,Lost Sales Opportunity,0.0
+Polo LS,Donkervoort,Summer,-501.0,0.0,,2025,Lost Sales Opportunity,0.0
+Polo LS,Donkervoort,Winter,-460.0,0.0,,2025,Lost Sales Opportunity,0.0
+Polo SS,Donkervoort,Summer,-2976.0,0.0,,2025,Lost Sales Opportunity,0.0
+Pull over half zip,Donkervoort,Winter,-257.0,0.0,,2025,Lost Sales Opportunity,0.0
+Pullover rollneck,Donkervoort,Winter,-113.0,0.0,,2025,Lost Sales Opportunity,0.0
+Short,Donkervoort,Summer,-1564.0,2241.64990234375,,2025,Lost Sales Opportunity,1621.04
+Sneakers,Donkervoort,Summer,-84.0,0.0,,2025,Lost Sales Opportunity,0.0
+Sweatshirt,Donkervoort,Summer,0.0,0.0,,2025,Leftover Inventory,0.0
+Sweatshirt,Donkervoort,Winter,-415.0,0.0,,2025,Lost Sales Opportunity,0.0
+Swim short,Donkervoort,Summer,-1451.0,0.0,,2025,Lost Sales Opportunity,0.0
+T-shirt SS,Donkervoort,Summer,-1748.0,0.0,,2025,Lost Sales Opportunity,0.0
+Boots,Dutch Dandies,Winter,-21.0,0.0,,2025,Lost Sales Opportunity,0.0
+Cardigan,Dutch Dandies,Summer,268.0,62979.0,,2025,Leftover Inventory,11760.0
+Cardigan,Dutch Dandies,Winter,-551.0,0.0,,2025,Lost Sales Opportunity,0.0
+Chino,Dutch Dandies,Summer,600.0,176041.296875,,2025,Leftover Inventory,38426.7
+Chino,Dutch Dandies,Winter,-217.0,23009.6484375,,2025,Lost Sales Opportunity,9117.9
+Coat,Dutch Dandies,Summer,-106.0,0.0,,2025,Lost Sales Opportunity,0.0
+Coat,Dutch Dandies,Winter,-530.0,0.0,,2025,Lost Sales Opportunity,0.0
+Crew-neck sweater,Dutch Dandies,Summer,-168.0,48219.8984375,,2025,Lost Sales Opportunity,8844.0
+Crew-neck sweater,Dutch Dandies,Winter,5619.0,807863.25,,2025,Leftover Inventory,144802.5
+Dress Shirt LS,Dutch Dandies,Summer,-1472.0,244322.75,,2025,Lost Sales Opportunity,49035.89
+Dress Shirt LS,Dutch Dandies,Winter,-2162.0,0.0,,2025,Lost Sales Opportunity,0.0
+Dress belt,Dutch Dandies,Summer,-50.0,0.0,,2025,Lost Sales Opportunity,0.0
+Dress belt,Dutch Dandies,Winter,-50.0,0.0,,2025,Lost Sales Opportunity,0.0
+Hoodie,Dutch Dandies,Winter,-28.0,0.0,,2025,Lost Sales Opportunity,0.0
+Jack outdoor,Dutch Dandies,Summer,0.0,0.0,,2025,Leftover Inventory,0.0
+Jack outdoor,Dutch Dandies,Winter,-1.0,0.0,,2025,Lost Sales Opportunity,0.0
+Jacket,Dutch Dandies,Summer,-840.0,604520.6875,,2025,Lost Sales Opportunity,66500.03
+Jacket,Dutch Dandies,Winter,-1970.0,0.0,,2025,Lost Sales Opportunity,0.0
+Mix & match jacket,Dutch Dandies,Summer,-799.0,0.0,,2025,Lost Sales Opportunity,0.0
+Mix & match jacket,Dutch Dandies,Winter,-884.0,0.0,,2025,Lost Sales Opportunity,0.0
+Mix & match trousers,Dutch Dandies,Summer,-928.0,40488.75,,2025,Lost Sales Opportunity,5456.25
+Mix & match trousers,Dutch Dandies,Winter,-1105.0,0.0,,2025,Lost Sales Opportunity,0.0
+Others,Dutch Dandies,Summer,3129.0,778863.125,,2025,Leftover Inventory,217358.34
+Others,Dutch Dandies,Winter,5443.0,710140.25,,2025,Leftover Inventory,278313.16
+Overshirt,Dutch Dandies,Summer,-348.0,0.0,,2025,Lost Sales Opportunity,0.0
+Overshirt,Dutch Dandies,Winter,-110.0,0.0,,2025,Lost Sales Opportunity,0.0
+Parka,Dutch Dandies,Summer,-41.0,0.0,,2025,Lost Sales Opportunity,0.0
+Parka,Dutch Dandies,Winter,-31.0,0.0,,2025,Lost Sales Opportunity,0.0
+Polo LS,Dutch Dandies,Summer,-221.0,0.0,,2025,Lost Sales Opportunity,0.0
+Polo LS,Dutch Dandies,Winter,-641.0,0.0,,2025,Lost Sales Opportunity,0.0
+Polo SS,Dutch Dandies,Summer,-67.0,414022.65625,,2025,Lost Sales Opportunity,76465.7
+Pull over half zip,Dutch Dandies,Winter,1889.0,307470.15625,,2025,Leftover Inventory,56023.5
+Pullover rollneck,Dutch Dandies,Winter,-614.0,0.0,,2025,Lost Sales Opportunity,0.0
+Shawl,Dutch Dandies,Summer,6.0,6656.2998046875,,2025,Leftover Inventory,1383.8
+Shawl,Dutch Dandies,Winter,-20.0,0.0,,2025,Lost Sales Opportunity,0.0
+Short,Dutch Dandies,Summer,-334.0,319.8999938964844,,2025,Lost Sales Opportunity,0.0
+Sneakers,Dutch Dandies,Summer,-42.0,0.0,,2025,Lost Sales Opportunity,0.0
+Sneakers,Dutch Dandies,Winter,-11.0,0.0,,2025,Lost Sales Opportunity,0.0
+Socks,Dutch Dandies,Winter,-1.0,0.0,,2025,Lost Sales Opportunity,0.0
+Suit,Dutch Dandies,Summer,-644.0,0.0,,2025,Lost Sales Opportunity,0.0
+Suit,Dutch Dandies,Winter,-437.0,0.0,,2025,Lost Sales Opportunity,0.0
+T-shirt SS,Dutch Dandies,Summer,-61.0,28259.80078125,,2025,Lost Sales Opportunity,4848.0
+T-shirt SS,Dutch Dandies,Winter,-1.0,0.0,,2025,Lost Sales Opportunity,0.0
+Tie,Dutch Dandies,Summer,431.0,46523.19921875,,2025,Leftover Inventory,12867.24
+Tie,Dutch Dandies,Winter,-213.0,0.0,,2025,Lost Sales Opportunity,0.0
+Trousers,Dutch Dandies,Summer,-414.0,33820.05078125,,2025,Lost Sales Opportunity,4825.75
+Trousers,Dutch Dandies,Winter,-381.0,0.0,,2025,Lost Sales Opportunity,0.0
+Wedding suit,Dutch Dandies,Summer,-1537.0,0.0,,2025,Lost Sales Opportunity,0.0
+5-pocket,J.C. RAGS,Winter,-250.0,0.0,,2025,Lost Sales Opportunity,0.0
+Cardigan,J.C. RAGS,Winter,-1300.0,0.0,,2025,Lost Sales Opportunity,0.0
+Casual belt,J.C. RAGS,Summer,-3.0,0.0,,2025,Lost Sales Opportunity,0.0
+Casual shirt LS,J.C. RAGS,Summer,-1689.0,74968.75,,2025,Lost Sales Opportunity,13299.65
+Casual shirt LS,J.C. RAGS,Winter,-1011.0,0.0,,2025,Lost Sales Opportunity,0.0
+Casual shirt SS,J.C. RAGS,Summer,-85.0,99124.8984375,,2025,Lost Sales Opportunity,22848.6
+Chino,J.C. RAGS,Summer,-1048.0,40283.8984375,,2025,Lost Sales Opportunity,18468.451
+Chino,J.C. RAGS,Winter,-939.0,269.8499755859375,,2025,Lost Sales Opportunity,75.0
+Coat,J.C. RAGS,Winter,-91.0,0.0,,2025,Lost Sales Opportunity,0.0
+Crew-neck sweater,J.C. RAGS,Summer,-802.0,0.0,,2025,Lost Sales Opportunity,0.0
+Crew-neck sweater,J.C. RAGS,Winter,-1756.0,0.0,,2025,Lost Sales Opportunity,0.0
+Hoodie,J.C. RAGS,Summer,-53.0,0.0,,2025,Lost Sales Opportunity,0.0
+Hoodie,J.C. RAGS,Winter,-214.0,0.0,,2025,Lost Sales Opportunity,0.0
+Jack outdoor,J.C. RAGS,Summer,-417.0,0.0,,2025,Lost Sales Opportunity,0.0
+Jack outdoor,J.C. RAGS,Winter,-113.0,0.0,,2025,Lost Sales Opportunity,0.0
+Jeans,J.C. RAGS,Summer,-1435.0,187658.640625,,2025,Lost Sales Opportunity,42725.82
+Jeans,J.C. RAGS,Winter,-993.0,0.0,,2025,Lost Sales Opportunity,0.0
+Others,J.C. RAGS,Summer,3832.0,186601.15625,,2025,Leftover Inventory,74764.47
+Others,J.C. RAGS,Winter,3712.0,239044.703125,,2025,Leftover Inventory,102975.69
+Overshirt,J.C. RAGS,Summer,464.0,214392.046875,,2025,Leftover Inventory,34680.6
+Overshirt,J.C. RAGS,Winter,-1077.0,22494.599609375,,2025,Lost Sales Opportunity,12731.49
+Padded jacket,J.C. RAGS,Summer,-122.0,0.0,,2025,Lost Sales Opportunity,0.0
+Padded jacket,J.C. RAGS,Winter,-397.0,0.0,,2025,Lost Sales Opportunity,0.0
+Parka,J.C. RAGS,Winter,0.0,0.0,,2025,Leftover Inventory,0.0
+Polo SS,J.C. RAGS,Summer,-347.0,236819.296875,,2025,Lost Sales Opportunity,47843.3
+Pull over half zip,J.C. RAGS,Winter,-1541.0,0.0,,2025,Lost Sales Opportunity,0.0
+Pullover rollneck,J.C. RAGS,Winter,-119.0,0.0,,2025,Lost Sales Opportunity,0.0
+Shawl,J.C. RAGS,Winter,-428.0,0.0,,2025,Lost Sales Opportunity,0.0
+Short,J.C. RAGS,Summer,-857.0,109450.84375,,2025,Lost Sales Opportunity,25670.23
+Sneakers,J.C. RAGS,Summer,-163.0,3297.25,,2025,Lost Sales Opportunity,1641.75
+Sneakers,J.C. RAGS,Winter,-241.0,0.0,,2025,Lost Sales Opportunity,0.0
+Sweatshirt,J.C. RAGS,Summer,-286.0,74262.8515625,,2025,Lost Sales Opportunity,10327.7
+Sweatshirt,J.C. RAGS,Winter,-481.0,0.0,,2025,Lost Sales Opportunity,0.0
+Swim short,J.C. RAGS,Summer,14.0,30061.19921875,,2025,Leftover Inventory,6561.2
+T-shirt SS,J.C. RAGS,Summer,-2800.0,151192.703125,,2025,Lost Sales Opportunity,23716.29
+T-shirt SS,J.C. RAGS,Winter,-2132.0,0.0,,2025,Lost Sales Opportunity,0.0
+Trousers,J.C. RAGS,Summer,1153.0,151835.84375,,2025,Leftover Inventory,26372.2
+Trousers,J.C. RAGS,Winter,181.0,61174.5,,2025,Leftover Inventory,8823.0
+Coat,Nobel,Winter,-906.0,0.0,,2025,Lost Sales Opportunity,0.0
+Others,Nobel,Winter,302.0,45284.8984375,,2025,Leftover Inventory,24086.77
+Boots,Recall,Winter,102.0,19487.5,,2025,Leftover Inventory,7787.0
+Casual Shoe,Recall,Winter,-3.0,0.0,,2025,Lost Sales Opportunity,0.0
+Coat,Recall,Winter,-1654.0,0.0,,2025,Lost Sales Opportunity,0.0
+Dress Shirt LS,Recall,Summer,-2693.0,0.0,,2025,Lost Sales Opportunity,0.0
+Dress Shirt LS,Recall,Winter,-2739.0,0.0,,2025,Lost Sales Opportunity,0.0
+Dress Shoe,Recall,Summer,-366.0,125947.5,,2025,Lost Sales Opportunity,32392.5
+Dress Shoe,Recall,Winter,-920.0,0.0,,2025,Lost Sales Opportunity,0.0
+Dress belt,Recall,Summer,-8.0,0.0,,2025,Lost Sales Opportunity,0.0
+Dress belt,Recall,Winter,-8.0,0.0,,2025,Lost Sales Opportunity,0.0
+Mix & match jacket,Recall,Summer,-318.0,0.0,,2025,Lost Sales Opportunity,0.0
+Mix & match jacket,Recall,Winter,-326.0,0.0,,2025,Lost Sales Opportunity,0.0
+Mix & match trousers,Recall,Summer,-366.0,0.0,,2025,Lost Sales Opportunity,0.0
+Mix & match trousers,Recall,Winter,-520.0,0.0,,2025,Lost Sales Opportunity,0.0
+Others,Recall,Summer,447.0,154036.90625,,2025,Leftover Inventory,33615.44
+Others,Recall,Winter,2699.0,442304.0625,,2025,Leftover Inventory,151608.64
+Suit,Recall,Summer,-7108.0,694084.3125,,2025,Lost Sales Opportunity,147322.98
+Suit,Recall,Winter,-2640.0,0.0,,2025,Lost Sales Opportunity,0.0
+Dress Shirt LS,Runway PARTY,Summer,0.0,0.0,,2025,Leftover Inventory,0.0
+Dress Shirt LS,Runway PARTY,Winter,0.0,0.0,,2025,Leftover Inventory,0.0
+Mix & match jacket,Runway PARTY,Summer,1953.0,494053.9375,,2025,Leftover Inventory,94510.45
+Mix & match jacket,Runway PARTY,Winter,-768.0,0.0,,2025,Lost Sales Opportunity,0.0
+Mix & match trousers,Runway PARTY,Summer,2931.0,377747.4375,,2025,Leftover Inventory,69982.75
+Mix & match trousers,Runway PARTY,Winter,-920.0,0.0,,2025,Lost Sales Opportunity,0.0
+Others,Runway PARTY,Winter,357.0,26757.1484375,,2025,Leftover Inventory,20396.37
+Overshirt,Runway PARTY,Summer,1135.0,165418.34375,,2025,Leftover Inventory,34462.35
+Overshirt,Runway PARTY,Winter,-98.0,0.0,,2025,Lost Sales Opportunity,0.0
+Suit,Runway PARTY,Summer,-128.0,0.0,,2025,Lost Sales Opportunity,0.0
+Suit,Runway PARTY,Winter,-40.0,0.0,,2025,Lost Sales Opportunity,0.0
+Boxershort,The BLUEPRINT Premium,Summer,-2.0,0.0,,2025,Lost Sales Opportunity,0.0
+Boxershort,The BLUEPRINT Premium,Winter,-2.0,0.0,,2025,Lost Sales Opportunity,0.0
+Cardigan,The BLUEPRINT Premium,Winter,-3527.0,0.0,,2025,Lost Sales Opportunity,0.0
+Casual shirt LS,The BLUEPRINT Premium,Winter,-48.0,0.0,,2025,Lost Sales Opportunity,0.0
+Casual shirt SS,The BLUEPRINT Premium,Summer,-178.0,0.0,,2025,Lost Sales Opportunity,0.0
+Crew-neck sweater,The BLUEPRINT Premium,Winter,-8721.0,0.0,,2025,Lost Sales Opportunity,0.0
+Dress Shirt LS,The BLUEPRINT Premium,Summer,12898.0,1081563.625,,2025,Leftover Inventory,259401.6
+Dress Shirt LS,The BLUEPRINT Premium,Winter,298.0,46161.6015625,,2025,Leftover Inventory,12997.52
+Hoodie,The BLUEPRINT Premium,Summer,-17.0,0.0,,2025,Lost Sales Opportunity,0.0
+Jacket,The BLUEPRINT Premium,Summer,-352.0,0.0,,2025,Lost Sales Opportunity,0.0
+Jacket,The BLUEPRINT Premium,Winter,-259.0,0.0,,2025,Lost Sales Opportunity,0.0
+Mix & match jacket,The BLUEPRINT Premium,Summer,-446.0,0.0,,2025,Lost Sales Opportunity,0.0
+Mix & match jacket,The BLUEPRINT Premium,Winter,-427.0,0.0,,2025,Lost Sales Opportunity,0.0
+Mix & match trousers,The BLUEPRINT Premium,Summer,-761.0,0.0,,2025,Lost Sales Opportunity,0.0
+Mix & match trousers,The BLUEPRINT Premium,Winter,-247.0,0.0,,2025,Lost Sales Opportunity,0.0
+Others,The BLUEPRINT Premium,Summer,3045.0,108882.3046875,,2025,Leftover Inventory,49272.918
+Others,The BLUEPRINT Premium,Winter,29054.0,1244540.0,,2025,Leftover Inventory,373739.5
+Padded jacket,The BLUEPRINT Premium,Summer,-64.0,0.0,,2025,Lost Sales Opportunity,0.0
+Padded jacket,The BLUEPRINT Premium,Winter,-103.0,0.0,,2025,Lost Sales Opportunity,0.0
+Polo SS,The BLUEPRINT Premium,Summer,16142.0,701875.1875,,2025,Leftover Inventory,198647.05
+Pull over half zip,The BLUEPRINT Premium,Winter,-11090.0,0.0,,2025,Lost Sales Opportunity,0.0
+Pullover rollneck,The BLUEPRINT Premium,Winter,30497.0,1204163.625,,2025,Leftover Inventory,331663.22
+Sweatshirt,The BLUEPRINT Premium,Summer,-100.0,0.0,,2025,Lost Sales Opportunity,0.0
+Sweatshirt,The BLUEPRINT Premium,Winter,-93.0,0.0,,2025,Lost Sales Opportunity,0.0
+Trendy shirt LS,The BLUEPRINT Premium,Summer,-8153.0,486735.59375,,2025,Lost Sales Opportunity,82706.35
+Trendy shirt LS,The BLUEPRINT Premium,Winter,-12481.0,0.0,,2025,Lost Sales Opportunity,0.0
