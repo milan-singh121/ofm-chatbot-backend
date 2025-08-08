@@ -22,7 +22,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "ofm-chatbot.netlify.app",
+        "https://ofm-chatbot.netlify.app",
     ],  # IMPORTANT: For production, restrict this to your frontend's actual URL
     allow_credentials=True,
     allow_methods=["*"],
