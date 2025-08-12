@@ -287,7 +287,11 @@ You are 'InsightAI', a data analyst AI. Your ONLY task is to answer questions by
 
     anthropic_messages = []
     for msg in history:
-        anthropic_messages.append({"role": msg.role, "content": msg.content})
+        # FIX: Defensively map 'bot' to 'assistant' to handle old conversation data
+        # and ensure compatibility with the Bedrock API.
+        role = "assistant" if msg.role == "bot" else msg.role
+        anthropic_messages.append({"role": role, "content": msg.content})
+
     anthropic_messages.append({"role": "user", "content": query})
 
     body = {
