@@ -34,14 +34,17 @@ DATA_FILE_PATH = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "final_data_for_zoho.csv")
 )
 
+
 DATA_CONTEXT = ""
 DF_SALES = None
 
 
 def load_and_prepare_data():
     """
-    Loads the CSV sales data and generates a highly detailed and structured
-    Data Guide for the AI to use as its only source of truth.
+    Loads the CSV sales data, cleans it, and generates a detailed data context with:
+    - Summary stats
+    - Unique counts of articles and brands
+    - Lists of unique articles and brands for the AI's grounding
     """
     global DF_SALES, DATA_CONTEXT
     print("\n--- Starting Data Loading Sequence ---")
@@ -50,23 +53,35 @@ def load_and_prepare_data():
     try:
         if not os.path.exists(DATA_FILE_PATH):
             raise FileNotFoundError(f"CSV file not found at: {DATA_FILE_PATH}")
+        if not os.access(DATA_FILE_PATH, os.R_OK):
+            raise PermissionError(f"No read permission for: {DATA_FILE_PATH}")
 
+        # Load dataframe
         df = pd.read_csv(
             DATA_FILE_PATH, encoding="utf-8", engine="python", on_bad_lines="warn"
         )
+
+        # Clean column headers
         df.columns = df.columns.str.strip()
 
-        # Data cleaning
-        for col in ["quantity", "retailPrice", "purchaseValue"]:
-            if col in df.columns:
-                df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0)
-        if "year" in df.columns:
-            df["year"] = (
-                pd.to_numeric(df["year"], errors="coerce")
-                .fillna(2025)
-                .astype(int)
-                .astype(str)
-            )
+        # Validate required columns
+        required_cols = ["quantity", "retailPrice", "purchaseValue", "year", "category"]
+        for col in required_cols:
+            if col not in df.columns:
+                raise ValueError(f"Missing required column: '{col}'")
+
+        # Clean and convert types
+        df["quantity"] = pd.to_numeric(df["quantity"], errors="coerce").fillna(0)
+        df["retailPrice"] = pd.to_numeric(df["retailPrice"], errors="coerce").fillna(0)
+        df["purchaseValue"] = pd.to_numeric(
+            df["purchaseValue"], errors="coerce"
+        ).fillna(0)
+        df["year"] = (
+            pd.to_numeric(df["year"], errors="coerce")
+            .fillna(2025)
+            .astype(int)
+            .astype(str)
+        )
 
         DF_SALES = df
 
@@ -119,12 +134,48 @@ def load_and_prepare_data():
             "- **'Lost Sales Opportunity'**: Represents the estimated quantity of sales missed in **2024** due to stockouts.\n\n"
         )
 
+        for category in df["category"].unique():
+            cat_df = df[df["category"] == category]
+            total_qty = int(cat_df["quantity"].sum())
+            total_retail = cat_df["retailPrice"].sum()
+            buffer.write(
+                f"- **{category}**: Total Quantity = `{total_qty:,}`, Total Retail Price = `${total_retail:,.2f}`\n"
+            )
+
+        # Add unique counts and lists for articles and brands:
+        article_groups = df["articleGroupDescription"].dropna().unique()
+        brand_names = df["brandDescription"].dropna().unique()
+
+        buffer.write("\n#### Unique Values Counts:\n")
+        buffer.write(
+            f"- Number of unique articleGroupDescription: {len(article_groups)}\n"
+        )
+        buffer.write(f"- Number of unique brandDescription: {len(brand_names)}\n\n")
+
+        # Optionally include lists, truncated if too long for prompt
+        MAX_LIST_ITEMS = 50
+
+        if len(article_groups) > 0:
+            articles_list = ", ".join(sorted(article_groups[:MAX_LIST_ITEMS]))
+            if len(article_groups) > MAX_LIST_ITEMS:
+                articles_list += ", ... (and more)"
+            buffer.write(f"- Article types: {articles_list}\n")
+
+        if len(brand_names) > 0:
+            brands_list = ", ".join(sorted(brand_names[:MAX_LIST_ITEMS]))
+            if len(brand_names) > MAX_LIST_ITEMS:
+                brands_list += ", ... (and more)"
+            buffer.write(f"- Brands: {brands_list}\n")
+
         DATA_CONTEXT = buffer.getvalue()
-        print("✅ Data loaded and detailed Data Guide prepared.")
+
+        print("✅ Data loaded and preparation complete.")
 
     except Exception as e:
-        print(f"\n🚨 DATA LOADING ERROR: {type(e).__name__}: {e}")
+        print("\n" + "=" * 20 + " DATA LOADING ERROR " + "=" * 20)
+        print(f"Error loading data: {type(e).__name__}: {e}")
         traceback.print_exc()
+        print("=" * 67 + "\n")
         DF_SALES, DATA_CONTEXT = None, ""
 
 
@@ -134,53 +185,68 @@ load_and_prepare_data()
 
 # --- AI Response Parsing ---
 def parse_ai_response(bot_response_text: str) -> ChatResponse:
-    """
-    Parses the AI's response, extracting chart JSON if present.
-    """
-    json_match = re.search(
-        r"<json>\s*(\{.*?\})\s*</json>", bot_response_text, re.DOTALL
-    )
+    def clean_json_response(text: str) -> str:
+        match_xml = re.search(r"<json>\s*(\{.*?\})\s*</json>", text, re.DOTALL)
+        if match_xml:
+            return match_xml.group(1)
+        match_md = re.search(r"``````", text, re.DOTALL)
+        if match_md:
+            return match_md.group(1)
+        return text.strip()
 
-    if json_match:
-        json_str = json_match.group(1)
-        try:
-            chart_object = json.loads(json_str)
-            if "x_axis_column" in chart_object and "y_axis_columns" in chart_object:
-                chart_data_list = chart_object.get("data", [])
-                formatted_chart = ChartData(
-                    chartData=[
-                        {
-                            "name": row.get(chart_object["x_axis_column"]),
-                            **{y: row.get(y) for y in chart_object["y_axis_columns"]},
-                        }
-                        for row in chart_data_list
-                    ],
-                    dataKeys=chart_object["y_axis_columns"],
-                    chartType=chart_object.get("chart_type", "bar"),
-                )
-                return ChatResponse(
-                    sender="assistant",
-                    text=chart_object.get(
-                        "text_summary", "Here is the visualization you requested:"
-                    ),
-                    type="chart",
-                    **formatted_chart.model_dump(),
-                )
-        except (json.JSONDecodeError, TypeError):
-            pass
+    def format_chart_data(chart_object: dict) -> ChartData:
+        x_col, y_cols = (
+            chart_object.get("x_axis_column"),
+            chart_object.get("y_axis_columns", []),
+        )
+        chart_data_list = chart_object.get("data", [])
+        if not isinstance(chart_data_list, list):
+            chart_data_list = []
+        return ChartData(
+            chartData=[
+                {"name": row.get(x_col), **{y: row.get(y) for y in y_cols}}
+                for row in chart_data_list
+            ],
+            dataKeys=y_cols,
+            chartType=chart_object.get("chart_type", "bar"),
+        )
 
-    # If no valid chart JSON is found, return a plain text response.
-    return ChatResponse(sender="assistant", text=bot_response_text, type="text")
+    cleaned_text = clean_json_response(bot_response_text)
+    try:
+        model_json = json.loads(cleaned_text)
+        if (
+            "x_axis_column" in model_json
+            and "y_axis_columns" in model_json
+            and "data" in model_json
+        ):
+            chart_data = format_chart_data(model_json)
+            return ChatResponse(
+                sender="bot",
+                text=model_json.get(
+                    "text_summary", "Here is the visualization you requested:"
+                ),
+                type="chart",
+                **chart_data.model_dump(),
+            )
+    except (json.JSONDecodeError, TypeError):
+        pass
+    return ChatResponse(sender="bot", text=bot_response_text, type="text")
 
 
 # --- Main Service Function ---
 async def get_ai_response(query: str, history: List[HistoryMessage]) -> ChatResponse:
     if not bedrock_client:
-        raise HTTPException(status_code=503, detail="Bedrock client is not available.")
+        raise HTTPException(
+            status_code=503,
+            detail="Bedrock client is not available. Check server logs.",
+        )
     if DF_SALES is None or DF_SALES.empty:
-        raise HTTPException(status_code=503, detail="Sales data is not loaded.")
+        raise HTTPException(
+            status_code=503,
+            detail="Sales data is not loaded. Check startup logs for errors.",
+        )
 
-    # A more forceful and detailed system prompt to strictly ground the model.
+    # Updated system prompt tailored for OFM retail team internal users
     system_prompt = f"""
 You are 'InsightAI', a data analyst AI for the OFM retail team. Your single and ONLY purpose is to answer questions by analyzing the data provided in the 'OFM Retail Data Guide'. You must adhere to the following rules without exception.
 
@@ -216,9 +282,9 @@ You are 'InsightAI', a data analyst AI for the OFM retail team. Your single and 
         },
     ]
 
+    # Append conversation history messages properly
     for msg in history:
-        # The API expects 'assistant' for the AI's role.
-        role = "assistant" if msg.role == "assistant" else "user"
+        role = "assistant" if msg.role == "bot" else "user"
         anthropic_messages.append(
             {"role": role, "content": [{"type": "text", "text": msg.content}]}
         )
@@ -231,39 +297,13 @@ You are 'InsightAI', a data analyst AI for the OFM retail team. Your single and 
         {
             "anthropic_version": "bedrock-2023-05-31",
             "max_tokens": 4096,
-            "temperature": 0.0,  # Set to 0 for deterministic, fact-based responses
+            "temperature": 0.0,
             "top_p": 0.9,
             "messages": anthropic_messages,
         }
     )
 
     try:
-        # This part of the code is not used in the agentic workflow, but kept for reference
-        # response = bedrock_client.invoke_model(
-        #     body=body,
-        #     modelId="anthropic.claude-3-5-sonnet-20240620-v1:0",
-        #     accept="application/json",
-        #     contentType="application/json",
-        # )
-        # response_body = json.loads(response.get("body").read())
-        # if "content" in response_body and response_body["content"]:
-        #     bot_response_text = response_body["content"][0].get("text")
-        #     return parse_ai_response(bot_response_text)
-        # else:
-        #     raise ValueError("Unexpected AI model response format.")
-
-        # This is a simplified placeholder for the agentic execution logic
-        # In a real scenario, you would have the AI generate pandas code here
-        # For now, we simulate a direct response based on the grounded prompt
-
-        # This is a placeholder for a more complex agentic response
-        # For now, we will just return a simple text response to demonstrate the prompt is working
-        # In a real agentic setup, you would parse the AI's code, execute it, and then get a final summary
-
-        # For demonstration, we'll just send the query to the model with the strong prompt
-        # and let it generate a direct answer without the code execution step.
-        # This simplifies the flow while still benefiting from the strong grounding.
-
         response = bedrock_client.invoke_model(
             body=body,
             modelId="anthropic.claude-3-5-sonnet-20240620-v1:0",
@@ -276,8 +316,5 @@ You are 'InsightAI', a data analyst AI for the OFM retail team. Your single and 
             return parse_ai_response(bot_response_text)
         else:
             raise ValueError("Unexpected AI model response format.")
-
     except Exception as e:
-        print(f"🚨 Error communicating with AI model: {e}")
-        traceback.print_exc()
         raise ValueError(f"Error communicating with AI model: {e}")
