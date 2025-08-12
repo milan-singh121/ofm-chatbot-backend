@@ -93,9 +93,7 @@ def load_and_prepare_data():
         buffer.write("#### Key Data Categories:\n")
         buffer.write("The 'category' column indicates rows for:\n")
         buffer.write("- **Forecasted Sales:** Sales predictions for 2025.\n")
-        buffer.write(
-            "- **Leftover Inventory:** Unsold stock forecasted for 2025. It is calculated by comparing forecasted sales with ordered inventory—after subtracting forecasted sales from ordered inventory, the remaining quantity represents the leftover inventory for 2025.\n"
-        )
+        buffer.write("- **Leftover Inventory:** Unsold stock forecasted for 2025.\n")
         buffer.write(
             "- **Lost Sales Opportunity:** Missed sales due to stockouts for the year 2025.\n"
         )
