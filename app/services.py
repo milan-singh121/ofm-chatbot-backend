@@ -34,7 +34,6 @@ DATA_FILE_PATH = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "final_data_for_zoho.csv")
 )
 
-
 DATA_CONTEXT = ""
 DF_SALES = None
 
@@ -85,54 +84,31 @@ def load_and_prepare_data():
 
         DF_SALES = df
 
-        # --- Generate the Detailed Data Guide ---
+        # Prepare data context string for grounding the AI
         buffer = io.StringIO()
-        buffer.write("## OFM Retail Data Guide\n\n")
+        buffer.write("### OFM Sales & Inventory Data Profile (Year 2025)\n\n")
         buffer.write(
-            "This guide explains the structure and meaning of the available dataset.\n\n"
+            f"This dataset contains **{df.shape[0]} rows** and **{df.shape[1]} columns** "
+            "detailing sales and inventory data for the fashion company OFM.\n\n"
         )
-
-        # Column Definitions
-        buffer.write("### Column Definitions\n")
+        buffer.write("#### Key Data Categories:\n")
+        buffer.write("The 'category' column indicates rows for:\n")
+        buffer.write("- **Forecasted Sales:** Sales predictions for 2025.\n")
+        buffer.write("- **Leftover Inventory:** Unsold stock forecasted for 2025.\n")
         buffer.write(
-            "- **articleGroupDescription**: The type or group of the clothing article (e.g., 'Jacket', 'Trousers').\n"
+            "- **Lost Sales Opportunity:** Missed sales due to stockouts for the year 2025.\n"
         )
-        buffer.write("- **brandDescription**: The name of the brand.\n")
+        buffer.write("- **Actual Sales:** Historical sales data for 2024.\n\n")
+        buffer.write("#### Core Columns:\n")
         buffer.write(
-            "- **season**: The season the article belongs to ('Summer' or 'Winter').\n"
-        )
-        buffer.write("- **quantity**: The number of units for the article.\n")
-        buffer.write(
-            "- **retailPrice**: The revenue generated per unit (sale price).\n"
-        )
-        buffer.write(
-            "- **purchaseValue**: The cost to acquire one unit of the article.\n"
+            "- **articleGroupDescription:** Article or Type of clothing, e.g., Jacket, Trousers.\n"
         )
         buffer.write(
-            "- **Inhouse_Brand**: Indicates if the brand is an internal OFM brand or an external one.\n"
+            "- **brandDescription:** Brand name, e.g., The BLUEPRINT Premium.\n"
         )
-        buffer.write("- **year**: The year the data pertains to.\n")
-        buffer.write(
-            "- **category**: The most important column for context, defining what the row represents.\n\n"
-        )
-
-        # Category Explanations
-        buffer.write("### Category Explanations\n")
-        buffer.write(
-            "The `category` column is critical. You must always filter by a specific category based on the user's query. The categories are:\n"
-        )
-        buffer.write(
-            "- **'Sales'**: Represents historical sales data for the year **2024**.\n"
-        )
-        buffer.write(
-            "- **'Forecasted Sales'**: Represents the sales forecast for the upcoming year **2025**.\n"
-        )
-        buffer.write(
-            "- **'Leftover Inventory'**: Represents the forecasted number of unsold items at the **end of 2025**.\n"
-        )
-        buffer.write(
-            "- **'Lost Sales Opportunity'**: Represents the estimated quantity of sales missed in **2024** due to stockouts.\n\n"
-        )
+        buffer.write("- **season:** Summer or Winter.\n")
+        buffer.write("- **quantity, retailPrice, purchaseValue, year**\n\n")
+        buffer.write("#### Summary Stats by Category:\n")
 
         for category in df["category"].unique():
             cat_df = df[df["category"] == category]
@@ -248,25 +224,32 @@ async def get_ai_response(query: str, history: List[HistoryMessage]) -> ChatResp
 
     # Updated system prompt tailored for OFM retail team internal users
     system_prompt = f"""
-You are 'InsightAI', a data analyst AI for the OFM retail team. Your single and ONLY purpose is to answer questions by analyzing the data provided in the 'OFM Retail Data Guide'. You must adhere to the following rules without exception.
+Human: You are 'InsightAI', an expert data analyst AI designed exclusively for the OFM retail team. OFM is a large fashion company operating numerous offline stores and a growing online store. Your entire knowledge base is the detailed sales and inventory data provided below, which encompasses both offline and online sales channels for the years 2024 and 2025.
 
-**CRITICAL RULES:**
-1.  **STRICT GROUNDING:** Your entire knowledge base is the 'OFM Retail Data Guide' below. You CANNOT use any information not present in this guide. You MUST NOT invent, assume, or hallucinate any data, numbers, or facts.
-2.  **DATA-DRIVEN ANSWERS ONLY:** Every part of your answer must be directly supported by the data. If a user's question cannot be answered with the provided data, you MUST respond by saying, "I cannot answer that question as the necessary information is not available in the dataset."
-3.  **NEVER MIX CATEGORIES:** The data is split into four distinct categories (`Sales`, `Forecasted Sales`, `Leftover Inventory`, `Lost Sales Opportunity`). You must *never* combine or aggregate data across these categories. Always infer from the user's query which specific category they are interested in. For example, if they ask for "sales," assume they mean 2024 `Sales` unless they specify "forecast."
-4.  **PROFESSIONAL TONE:** Your audience is the OFM retail team. Use clear, professional business language.
-5.  **NO RAW DATA:** Do not show raw data tables, code, or internal JSON in your final response to the user. Synthesize the findings into natural language.
+You are speaking to retail managers, supply chain analysts, and business leaders at OFM who are familiar with retail operations but want clear, concise data-driven insights to make informed decisions.
+
+**CRITICAL GUIDELINES:**
+1. Base all answers 100% on the provided **Data Context**.
+2. Understand and distinguish between:
+   - **Offline store sales**
+   - **Online store sales**
+   - **Forecasted sales for 2025**
+   - **Leftover inventory** from previous years
+   - **Lost sales opportunities** due to stockouts.
+3. Use terminology consistent with retail analytics, inventory management, and omnichannel sales.
+4. Provide actionable insights and recommendations where appropriate.
+5. Deliver concise, clear, and professional answers suitable for OFM retail teams.
+6. Never reveal raw data, code, or internal JSON; synthesize the results naturally.
+7. If the data doesn't support an answer, state that explicitly.
 
 **OUTPUT FORMATTING:**
--   For text answers, provide a concise, professional summary.
--   For visualization requests, you MUST respond ONLY with a JSON object inside `<json></json>` tags. The JSON must have these keys: `chart_type`, `x_axis_column`, `y_axis_columns`, `data`, `text_summary`.
+- Natural language text answers suitable for OFM retail teams.
+- For visualization requests, only respond with JSON object inside <json></json> tags with keys: chart_type, x_axis_column, y_axis_columns, data, text_summary.
 
----
-**OFM RETAIL DATA GUIDE (Your ONLY source of truth):**
+**Data Context from OFM sales and inventory data:**
 <data_context>
 {DATA_CONTEXT}
 </data_context>
----
 """
 
     anthropic_messages = [
@@ -276,7 +259,7 @@ You are 'InsightAI', a data analyst AI for the OFM retail team. Your single and 
             "content": [
                 {
                     "type": "text",
-                    "text": "Hello. I am InsightAI, your retail data analyst. How can I assist with our sales and inventory data today?",
+                    "text": "Hello OFM team. I am InsightAI, your dedicated retail data analyst. How can I assist you with our sales and inventory insights today?",
                 }
             ],
         },
