@@ -263,32 +263,43 @@ def parse_ai_response(bot_response_text: str) -> ChatResponse:
 
 
 # --- Main Service Function ---
-# --- Main Service Function ---
 async def get_ai_response(query: str, history: List[HistoryMessage]) -> ChatResponse:
     if not bedrock_client:
         raise HTTPException(status_code=503, detail="Bedrock client is not available.")
     if DF_SALES is None or DF_SALES.empty:
         raise HTTPException(status_code=503, detail="Sales data is not loaded.")
 
-    # This agentic prompt instructs the AI to generate code first.
+    # Convert the DataFrame to a CSV string to be included in the prompt
+    csv_data = DF_SALES.to_csv(index=False)
+
+    # This prompt provides the full data context and the raw data in each call.
     system_prompt = f"""
-You are 'InsightAI', a data analyst AI. Your ONLY task is to answer questions by writing Python code to analyze a pandas DataFrame that is ALREADY loaded and available to you under the name `df`.
+You are 'InsightAI', a data analyst AI for the OFM retail team. Your single and ONLY task is to answer questions based on the data provided below.
 
 **CRITICAL RULES - FOLLOW EXACTLY:**
-1.  **DO NOT write any code to load data (e.g., `pd.read_csv`). The DataFrame `df` is ALWAYS available to you.**
-2.  Analyze the user's query to understand the required analysis. This may involve filtering by multiple columns (e.g., `category` and `season`).
-3.  Write Python code using the `df` DataFrame. Your code must be valid and runnable.
-4.  Your final line of code MUST assign the result to a variable named `result`.
-5.  You MUST respond *only* with a JSON object wrapped in ```json ... ```. The JSON must contain two keys: "thought" (your reasoning) and "code" (your Python code).
+1.  **YOUR ONLY SOURCE OF TRUTH:** The user's query must be answered using ONLY the "OFM Retail Data Guide" and the "Full Dataset (CSV Format)" provided in this prompt.
+2.  **NO HALLUCINATIONS:** You MUST NOT invent, assume, or hallucinate any data, numbers, or facts. If the answer cannot be found in the provided data, you MUST state that clearly.
+3.  **NEVER MIX CATEGORIES:** The data is split into four distinct categories (`Sales`, `Forecasted Sales`, `Leftover Inventory`, `Lost Sales Opportunity`). You must *never* combine or aggregate data across these categories. Always infer the correct category from the user's query.
+4.  **PROFESSIONAL TONE:** Your audience is the OFM retail team. Use clear, professional business language.
+5.  **NO RAW DATA:** Do not show raw data tables or code in your final response. Synthesize the findings into natural language.
+6. **Show relevant details and Information:** Always give relevant information and details along with the requested insights.
 
-**DATA CONTEXT (Schema of the `df` DataFrame):**
+---
+**OFM RETAIL DATA GUIDE:**
+<data_guide>
 {DATA_CONTEXT}
+</data_guide>
+---
+**FULL DATASET (CSV FORMAT):**
+<dataset>
+{csv_data}
+</dataset>
+---
 """
 
     anthropic_messages = []
     for msg in history:
-        # FIX: Defensively map 'bot' to 'assistant' to handle old conversation data
-        # and ensure compatibility with the Bedrock API.
+        # Defensively map 'bot' to 'assistant' to handle old conversation data
         role = "assistant" if msg.role == "bot" else msg.role
         anthropic_messages.append({"role": role, "content": msg.content})
 
@@ -303,7 +314,7 @@ You are 'InsightAI', a data analyst AI. Your ONLY task is to answer questions by
     }
 
     try:
-        # Step 1: Get the AI to generate the Python code
+        # Simplified to a single API call. The AI now reasons over the data in the prompt.
         response = bedrock_client.invoke_model(
             body=json.dumps(body),
             modelId="anthropic.claude-3-5-sonnet-20240620-v1:0",
@@ -311,58 +322,9 @@ You are 'InsightAI', a data analyst AI. Your ONLY task is to answer questions by
             contentType="application/json",
         )
         response_body = json.loads(response.get("body").read())
-        ai_response_text = response_body.get("content", [{}])[0].get("text", "")
+        bot_response_text = response_body.get("content", [{}])[0].get("text", "")
 
-        json_part_match = re.search(
-            r"```json\s*(\{.*?\})\s*```", ai_response_text, re.DOTALL
-        )
-
-        if not json_part_match:
-            # If the AI gives a direct answer, return it
-            return ChatResponse(sender="assistant", text=ai_response_text, type="text")
-
-        json_str = json_part_match.group(1)
-        ai_json = json.loads(json_str, strict=False)
-        code_to_execute = ai_json.get("code")
-
-        if not code_to_execute:
-            raise ValueError("AI response did not contain code to execute.")
-
-        # Step 2: Execute the generated code
-        execution_result = execute_python_code(code_to_execute)
-
-        # Step 3: Ask the AI to summarize the result
-        anthropic_messages.append({"role": "assistant", "content": ai_response_text})
-
-        final_prompt = f"""
-I have executed your code. The result is in the JSON below.
-Your task is to now act as a friendly business analyst and provide a final, user-friendly answer to the original user query, based ONLY on this data.
-
-**CRITICAL INSTRUCTIONS FOR THIS FINAL RESPONSE:**
-- DO NOT mention the code, the execution, or the JSON structure.
-- If the execution result contains an error, apologize and state that a technical error occurred.
-- Speak in natural language.
-- If the original query asked for a chart or visualization, provide the necessary JSON object for the chart wrapped in `<json></json>` tags in your response.
-
-**Execution Result:**
-```json
-{json.dumps(execution_result, indent=2)}
-```
-"""
-        anthropic_messages.append({"role": "user", "content": final_prompt})
-
-        body["messages"] = anthropic_messages
-
-        final_response = bedrock_client.invoke_model(
-            body=json.dumps(body),
-            modelId="anthropic.claude-3-5-sonnet-20240620-v1:0",
-            accept="application/json",
-            contentType="application/json",
-        )
-        final_response_body = json.loads(final_response.get("body").read())
-        final_bot_text = final_response_body.get("content", [{}])[0].get("text", "")
-
-        return parse_ai_response(final_bot_text)
+        return parse_ai_response(bot_response_text)
 
     except Exception as e:
         print(f"🚨 Error communicating with AI model: {e}")
