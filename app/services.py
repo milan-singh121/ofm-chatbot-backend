@@ -39,10 +39,7 @@ DF_SALES = None
 
 def load_and_prepare_data():
     """
-    Loads the CSV sales data, cleans it, and generates a detailed data context with:
-    - Summary stats
-    - Unique counts of articles and brands
-    - Lists of unique articles and brands for the AI's grounding
+    Loads the CSV sales data, cleans it, and generates a detailed data context.
     """
     global DF_SALES, DATA_CONTEXT
     print("\n--- Starting Data Loading Sequence ---")
@@ -54,21 +51,16 @@ def load_and_prepare_data():
         if not os.access(DATA_FILE_PATH, os.R_OK):
             raise PermissionError(f"No read permission for: {DATA_FILE_PATH}")
 
-        # Load dataframe
         df = pd.read_csv(
             DATA_FILE_PATH, encoding="utf-8", engine="python", on_bad_lines="warn"
         )
-
-        # Clean column headers
         df.columns = df.columns.str.strip()
 
-        # Validate required columns
         required_cols = ["quantity", "retailPrice", "purchaseValue", "year", "category"]
         for col in required_cols:
             if col not in df.columns:
                 raise ValueError(f"Missing required column: '{col}'")
 
-        # Clean and convert types
         df["quantity"] = pd.to_numeric(df["quantity"], errors="coerce").fillna(0)
         df["retailPrice"] = pd.to_numeric(df["retailPrice"], errors="coerce").fillna(0)
         df["purchaseValue"] = pd.to_numeric(
@@ -83,54 +75,38 @@ def load_and_prepare_data():
 
         DF_SALES = df
 
-        # Prepare data context string for grounding the AI
-        # --- Generate the Detailed Data Guide ---
         buffer = io.StringIO()
         buffer.write("## OFM Retail Data Guide\n\n")
         buffer.write(
             "This guide explains the structure and meaning of the available dataset.\n\n"
         )
-
-        # Column Definitions
         buffer.write("### Column Definitions\n")
         buffer.write(
-            "- **articleGroupDescription**: The type or group of the clothing article (e.g., 'Jacket', 'Trousers').\n"
+            "- **articleGroupDescription**: The type or group of the clothing article.\n"
         )
         buffer.write("- **brandDescription**: The name of the brand.\n")
         buffer.write(
             "- **season**: The season the article belongs to ('Summer' or 'Winter').\n"
         )
-        buffer.write("- **quantity**: The number of units for the article.\n")
+        buffer.write("- **quantity**: The number of units.\n")
+        buffer.write("- **retailPrice**: The revenue generated per unit.\n")
+        buffer.write("- **purchaseValue**: The cost to acquire one unit.\n")
         buffer.write(
-            "- **retailPrice**: The revenue generated per unit (sale price).\n"
-        )
-        buffer.write(
-            "- **purchaseValue**: The cost to acquire one unit of the article.\n"
-        )
-        buffer.write(
-            "- **Inhouse_Brand**: Indicates if the brand is an internal OFM brand or an external one.\n"
+            "- **Inhouse_Brand**: Indicates if the brand is internal or external.\n"
         )
         buffer.write("- **year**: The year the data pertains to.\n")
-        buffer.write(
-            "- **category**: The most important column for context, defining what the row represents.\n\n"
-        )
-
-        # Category Explanations
+        buffer.write("- **category**: Defines what the row represents.\n\n")
         buffer.write("### Category Explanations\n")
         buffer.write(
-            "The `category` column is critical. You must always filter by a specific category based on the user's query. The categories are:\n"
+            "The `category` column is critical. Always filter by a specific category.\n"
+        )
+        buffer.write("- **'Sales'**: Historical sales for **2024**.\n")
+        buffer.write("- **'Forecasted Sales'**: Sales forecast for **2025**.\n")
+        buffer.write(
+            "- **'Leftover Inventory'**: Forecasted unsold items at the **end of 2025**.\n"
         )
         buffer.write(
-            "- **'Sales'**: Represents historical sales data for the year **2024**.\n"
-        )
-        buffer.write(
-            "- **'Forecasted Sales'**: Represents the sales forecast for the upcoming year **2025**.\n"
-        )
-        buffer.write(
-            "- **'Leftover Inventory'**: Represents the forecasted number of unsold items at the **end of 2025**.\n"
-        )
-        buffer.write(
-            "- **'Lost Sales Opportunity'**: Represents the estimated quantity of sales missed in **2024** due to stockouts.\n\n"
+            "- **'Lost Sales Opportunity'**: Estimated missed sales in **2024** due to stockouts.\n\n"
         )
 
         for category in df["category"].unique():
@@ -138,99 +114,53 @@ def load_and_prepare_data():
             total_qty = int(cat_df["quantity"].sum())
             total_retail = cat_df["retailPrice"].sum()
             buffer.write(
-                f"- **{category}**: Total Quantity = `{total_qty:,}`, Total Retail Price = `${total_retail:,.2f}`\n"
+                f"- **{category}**: Total Qty = `{total_qty:,}`, Total Retail Price = `${total_retail:,.2f}`\n"
             )
 
-        # Add unique counts and lists for articles and brands:
         article_groups = df["articleGroupDescription"].dropna().unique()
         brand_names = df["brandDescription"].dropna().unique()
-
         buffer.write("\n#### Unique Values Counts:\n")
-        buffer.write(
-            f"- Number of unique articleGroupDescription: {len(article_groups)}\n"
-        )
-        buffer.write(f"- Number of unique brandDescription: {len(brand_names)}\n\n")
-
-        # Optionally include lists, truncated if too long for prompt
-        MAX_LIST_ITEMS = 50
-
-        if len(article_groups) > 0:
-            articles_list = ", ".join(sorted(article_groups[:MAX_LIST_ITEMS]))
-            if len(article_groups) > MAX_LIST_ITEMS:
-                articles_list += ", ... (and more)"
-            buffer.write(f"- Article types: {articles_list}\n")
-
-        if len(brand_names) > 0:
-            brands_list = ", ".join(sorted(brand_names[:MAX_LIST_ITEMS]))
-            if len(brand_names) > MAX_LIST_ITEMS:
-                brands_list += ", ... (and more)"
-            buffer.write(f"- Brands: {brands_list}\n")
+        buffer.write(f"- Unique articleGroupDescription: {len(article_groups)}\n")
+        buffer.write(f"- Unique brandDescription: {len(brand_names)}\n")
 
         DATA_CONTEXT = buffer.getvalue()
-
         print("✅ Data loaded and preparation complete.")
 
     except Exception as e:
-        print("\n" + "=" * 20 + " DATA LOADING ERROR " + "=" * 20)
+        print(f"\n{'=' * 20} DATA LOADING ERROR {'=' * 20}")
         print(f"Error loading data: {type(e).__name__}: {e}")
         traceback.print_exc()
         print("=" * 67 + "\n")
         DF_SALES, DATA_CONTEXT = None, ""
 
 
-# Load Data on Module Import
 load_and_prepare_data()
-
-
-def execute_python_code(code: str) -> dict:
-    """
-    Safely executes Python code generated by the AI.
-    """
-    if DF_SALES is None:
-        return {"error": "DataFrame not loaded."}
-
-    print(f"🐍 Executing AI-generated code:\n---\n{code}\n---")
-
-    scope = {"df": DF_SALES.copy(), "pd": pd}
-
-    try:
-        exec(code, scope)
-        if "result" in scope:
-            output = scope["result"]
-            if isinstance(output, pd.DataFrame):
-                return {"data": output.to_dict(orient="records")}
-            else:
-                if hasattr(output, "item"):
-                    return {"data": output.item()}
-                return {"data": output}
-        else:
-            return {"message": "Code executed, but no 'result' variable was found."}
-
-    except Exception as e:
-        print(f"💥 Code Execution Error: {e}")
-        traceback.print_exc()
-        return {"error": f"Error executing code: {type(e).__name__}: {e}"}
 
 
 # --- AI Response Parsing ---
 def parse_ai_response(bot_response_text: str) -> ChatResponse:
     def clean_json_response(text: str) -> str:
+        # Search for content inside <json> tags or markdown code blocks
         match_xml = re.search(r"<json>\s*(\{.*?\})\s*</json>", text, re.DOTALL)
         if match_xml:
             return match_xml.group(1)
-        match_md = re.search(r"``````", text, re.DOTALL)
+        match_md = re.search(r"```json\s*(\{.*?\})\s*```", text, re.DOTALL)
         if match_md:
             return match_md.group(1)
+        # As a fallback, try to find any JSON object in the string
+        match_json = re.search(r"(\{.*?\})", text, re.DOTALL)
+        if match_json:
+            return match_json.group(1)
         return text.strip()
 
     def format_chart_data(chart_object: dict) -> ChartData:
-        x_col, y_cols = (
-            chart_object.get("x_axis_column"),
-            chart_object.get("y_axis_columns", []),
-        )
+        x_col = chart_object.get("x_axis_column")
+        y_cols = chart_object.get("y_axis_columns", [])
         chart_data_list = chart_object.get("data", [])
-        if not isinstance(chart_data_list, list):
-            chart_data_list = []
+
+        if not all([x_col, y_cols, isinstance(chart_data_list, list)]):
+            raise ValueError("Invalid chart object structure")
+
         return ChartData(
             chartData=[
                 {"name": row.get(x_col), **{y: row.get(y) for y in y_cols}}
@@ -257,8 +187,11 @@ def parse_ai_response(bot_response_text: str) -> ChatResponse:
                 type="chart",
                 **chart_data.model_dump(),
             )
-    except (json.JSONDecodeError, TypeError):
-        pass
+    except (json.JSONDecodeError, TypeError, ValueError):
+        # If JSON parsing fails or the structure is wrong, return as plain text
+        return ChatResponse(sender="bot", text=bot_response_text, type="text")
+
+    # Fallback for cases where it's JSON but not a chart
     return ChatResponse(sender="bot", text=bot_response_text, type="text")
 
 
@@ -269,20 +202,45 @@ async def get_ai_response(query: str, history: List[HistoryMessage]) -> ChatResp
     if DF_SALES is None or DF_SALES.empty:
         raise HTTPException(status_code=503, detail="Sales data is not loaded.")
 
-    # Convert the DataFrame to a CSV string to be included in the prompt
     csv_data = DF_SALES.to_csv(index=False)
 
-    # This prompt provides the full data context and the raw data in each call.
+    # --- UPDATED SYSTEM PROMPT ---
+    # This is the key change. We now explicitly tell the model how to generate charts.
     system_prompt = f"""
 You are 'InsightAI', a data analyst AI for the OFM retail team. Your single and ONLY task is to answer questions based on the data provided below.
 
 **CRITICAL RULES - FOLLOW EXACTLY:**
-1.  **YOUR ONLY SOURCE OF TRUTH:** The user's query must be answered using ONLY the "OFM Retail Data Guide" and the "Full Dataset (CSV Format)" provided in this prompt.
-2.  **NO HALLUCINATIONS:** You MUST NOT invent, assume, or hallucinate any data, numbers, or facts. If the answer cannot be found in the provided data, you MUST state that clearly.
-3.  **NEVER MIX CATEGORIES:** The data is split into four distinct categories (`Sales`, `Forecasted Sales`, `Leftover Inventory`, `Lost Sales Opportunity`). You must *never* combine or aggregate data across these categories. Always infer the correct category from the user's query.
-4.  **PROFESSIONAL TONE:** Your audience is the OFM retail team. Use clear, professional business language.
-5.  **NO RAW DATA:** Do not show raw data tables or code in your final response. Synthesize the findings into natural language.
-6. **Show relevant details and Information:** Always give relevant information and details along with the requested insights.
+1.  **SOURCE OF TRUTH:** Answer ONLY using the "OFM Retail Data Guide" and the "Full Dataset (CSV Format)".
+2.  **NO HALLUCINATIONS:** If the answer is not in the data, state that clearly. DO NOT invent data.
+3.  **NEVER MIX CATEGORIES:** Data has four categories (`Sales`, `Forecasted Sales`, `Leftover Inventory`, `Lost Sales Opportunity`). Never combine them. Infer the category from the user's query.
+4.  **RESPONSE FORMAT:**
+    - For regular text answers, respond in clear, professional business language.
+    - **For visualization requests (chart, graph, plot, etc.), you MUST respond with a JSON object.**
+
+**JSON FORMAT FOR CHARTS:**
+When a user asks for a chart, you MUST generate a JSON object with the following structure. Provide a brief text summary in the `text_summary` field. Wrap the entire JSON in `<json>` tags.
+
+```json
+<json>
+{{
+  "chart_type": "bar",
+  "x_axis_column": "articleGroupDescription",
+  "y_axis_columns": ["quantity", "retailPrice"],
+  "data": [
+    {{"articleGroupDescription": "T-shirt SS", "quantity": 83425, "retailPrice": 3338414.46}},
+    {{"articleGroupDescription": "Polo SS", "quantity": 80812, "retailPrice": 4886982.84}},
+    {{"articleGroupDescription": "Jeans", "quantity": 42209, "retailPrice": 4723374.60}}
+  ],
+  "text_summary": "Here is a chart showing the top 3 forecasted article groups for 2025 by quantity and retail price."
+}}
+</json>
+```
+
+- `chart_type`: Can be 'bar', 'line', 'pie', etc.
+- `x_axis_column`: The column name for the X-axis labels.
+- `y_axis_columns`: A list of one or more column names for the Y-axis values.
+- `data`: A list of dictionaries representing the data points for the chart.
+- `text_summary`: A short, user-friendly summary of the chart's findings.
 
 ---
 **OFM RETAIL DATA GUIDE:**
@@ -299,7 +257,6 @@ You are 'InsightAI', a data analyst AI for the OFM retail team. Your single and 
 
     anthropic_messages = []
     for msg in history:
-        # Defensively map 'bot' to 'assistant' to handle old conversation data
         role = "assistant" if msg.role == "bot" else msg.role
         anthropic_messages.append({"role": role, "content": msg.content})
 
@@ -314,7 +271,6 @@ You are 'InsightAI', a data analyst AI for the OFM retail team. Your single and 
     }
 
     try:
-        # Simplified to a single API call. The AI now reasons over the data in the prompt.
         response = bedrock_client.invoke_model(
             body=json.dumps(body),
             modelId="anthropic.claude-3-5-sonnet-20240620-v1:0",
