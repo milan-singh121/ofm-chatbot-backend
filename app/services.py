@@ -140,14 +140,12 @@ load_and_prepare_data()
 # --- AI Response Parsing ---
 def parse_ai_response(bot_response_text: str) -> ChatResponse:
     def clean_json_response(text: str) -> str:
-        # Search for content inside <json> tags or markdown code blocks
         match_xml = re.search(r"<json>\s*(\{.*?\})\s*</json>", text, re.DOTALL)
         if match_xml:
             return match_xml.group(1)
         match_md = re.search(r"```json\s*(\{.*?\})\s*```", text, re.DOTALL)
         if match_md:
             return match_md.group(1)
-        # As a fallback, try to find any JSON object in the string
         match_json = re.search(r"(\{.*?\})", text, re.DOTALL)
         if match_json:
             return match_json.group(1)
@@ -157,9 +155,33 @@ def parse_ai_response(bot_response_text: str) -> ChatResponse:
         x_col = chart_object.get("x_axis_column")
         y_cols = chart_object.get("y_axis_columns", [])
         chart_data_list = chart_object.get("data", [])
+        chart_type = chart_object.get("chart_type", "bar")
 
-        if not all([x_col, y_cols, isinstance(chart_data_list, list)]):
-            raise ValueError("Invalid chart object structure")
+        if not isinstance(chart_data_list, list) or not chart_data_list:
+            raise ValueError("Chart data is empty or invalid")
+
+        # If it's a pie chart and axes are missing, try to infer them.
+        if chart_type == "pie" and (not x_col or not y_cols):
+            print("Attempting to infer pie chart columns...")
+            first_row = chart_data_list[0]
+            # Find the first key with a string value for the x-axis (name)
+            inferred_x = next(
+                (k for k, v in first_row.items() if isinstance(v, str)), None
+            )
+            # Find the first key with a numeric value for the y-axis (value)
+            inferred_y = next(
+                (k for k, v in first_row.items() if isinstance(v, (int, float))), None
+            )
+
+            if inferred_x and inferred_y:
+                x_col = inferred_x
+                y_cols = [inferred_y]
+                print(f"Inferred columns: x='{x_col}', y='{y_cols[0]}'")
+            else:
+                raise ValueError("Could not infer name/value columns for pie chart.")
+
+        if not all([x_col, y_cols]):
+            raise ValueError("Invalid chart object structure: missing axis columns.")
 
         return ChartData(
             chartData=[
@@ -167,17 +189,13 @@ def parse_ai_response(bot_response_text: str) -> ChatResponse:
                 for row in chart_data_list
             ],
             dataKeys=y_cols,
-            chartType=chart_object.get("chart_type", "bar"),
+            chartType=chart_type,
         )
 
     cleaned_text = clean_json_response(bot_response_text)
     try:
         model_json = json.loads(cleaned_text)
-        if (
-            "x_axis_column" in model_json
-            and "y_axis_columns" in model_json
-            and "data" in model_json
-        ):
+        if "data" in model_json and "chart_type" in model_json:
             chart_data = format_chart_data(model_json)
             return ChatResponse(
                 sender="bot",
@@ -187,11 +205,12 @@ def parse_ai_response(bot_response_text: str) -> ChatResponse:
                 type="chart",
                 **chart_data.model_dump(),
             )
-    except (json.JSONDecodeError, TypeError, ValueError):
-        # If JSON parsing fails or the structure is wrong, return as plain text
+    except (json.JSONDecodeError, TypeError, ValueError) as e:
+        print(
+            f"Could not parse response as chart JSON. Error: {e}. Falling back to text."
+        )
         return ChatResponse(sender="bot", text=bot_response_text, type="text")
 
-    # Fallback for cases where it's JSON but not a chart
     return ChatResponse(sender="bot", text=bot_response_text, type="text")
 
 
@@ -205,7 +224,6 @@ async def get_ai_response(query: str, history: List[HistoryMessage]) -> ChatResp
     csv_data = DF_SALES.to_csv(index=False)
 
     # --- UPDATED SYSTEM PROMPT ---
-    # This is the key change. We now explicitly tell the model how to generate charts.
     system_prompt = f"""
 You are 'InsightAI', a data analyst AI for the OFM retail team. Your single and ONLY task is to answer questions based on the data provided below.
 
@@ -220,6 +238,7 @@ You are 'InsightAI', a data analyst AI for the OFM retail team. Your single and 
 **JSON FORMAT FOR CHARTS:**
 When a user asks for a chart, you MUST generate a JSON object with the following structure. Provide a brief text summary in the `text_summary` field. Wrap the entire JSON in `<json>` tags.
 
+**Example for Bar/Line Chart:**
 ```json
 <json>
 {{
@@ -228,19 +247,31 @@ When a user asks for a chart, you MUST generate a JSON object with the following
   "y_axis_columns": ["quantity", "retailPrice"],
   "data": [
     {{"articleGroupDescription": "T-shirt SS", "quantity": 83425, "retailPrice": 3338414.46}},
-    {{"articleGroupDescription": "Polo SS", "quantity": 80812, "retailPrice": 4886982.84}},
-    {{"articleGroupDescription": "Jeans", "quantity": 42209, "retailPrice": 4723374.60}}
+    {{"articleGroupDescription": "Polo SS", "quantity": 80812, "retailPrice": 4886982.84}}
   ],
-  "text_summary": "Here is a chart showing the top 3 forecasted article groups for 2025 by quantity and retail price."
+  "text_summary": "Here is a chart showing the top 2 forecasted article groups."
 }}
 </json>
 ```
 
-- `chart_type`: Can be 'bar', 'line', 'pie', etc.
-- `x_axis_column`: The column name for the X-axis labels.
-- `y_axis_columns`: A list of one or more column names for the Y-axis values.
-- `data`: A list of dictionaries representing the data points for the chart.
-- `text_summary`: A short, user-friendly summary of the chart's findings.
+**Example for Pie Chart:**
+For a **pie chart**, you must still provide the `x_axis_column` (the slice label) and `y_axis_columns`. The `y_axis_columns` list MUST contain exactly ONE column (the slice value).
+
+```json
+<json>
+{{
+  "chart_type": "pie",
+  "x_axis_column": "articleGroupDescription",
+  "y_axis_columns": ["quantity"],
+  "data": [
+    {{"articleGroupDescription": "T-shirt SS", "quantity": 83425}},
+    {{"articleGroupDescription": "Polo SS", "quantity": 80812}},
+    {{"articleGroupDescription": "Jeans", "quantity": 42209}}
+  ],
+  "text_summary": "This pie chart shows the top 3 article groups by forecasted quantity."
+}}
+</json>
+```
 
 ---
 **OFM RETAIL DATA GUIDE:**
